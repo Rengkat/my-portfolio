@@ -1,0 +1,172 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .circle-cont {
+    @apply grid place-content-center;
+  }
+  .interest-title {
+    @apply text-center font-medium my-5 text-2xl text-white;
+  }
+  .footer-a {
+    @apply w-[3rem] h-[3rem] rounded-full p-3 bg-[#313741] grid place-content-center hover:bg-[#02cfb4] transition-all duration-150 ease-linear;
+  }
+  .footer-icon {
+    @apply text-[2rem] text-[#02cfb4] hover:text-[#313741] transition-all duration-100;
+  }
+}
+
+.bar {
+  background-color: black;
+  height: 0.2rem;
+  transition: all 0.2s linear;
+}
+.menu:hover .bar {
+  width: 100%;
+  background-color: #ffffff;
+}
+.nav {
+  padding: 2rem 0 1.5rem 0;
+  background: rgb(23, 212, 151);
+  background: linear-gradient(
+    90deg,
+    rgba(23, 212, 151, 1) 0%,
+    rgba(18, 222, 179, 1) 32%,
+    rgba(8, 247, 247, 1) 86%
+  );
+  box-shadow: -1px 4px 20px -1px rgba(0, 0, 0, 0.43);
+  -webkit-box-shadow: -1px 4px 20px -1px rgba(0, 0, 0, 0.43);
+  -moz-box-shadow: -1px 4px 20px -1px rgba(0, 0, 0, 0.43);
+}
+.hero {
+  height: 100vh;
+  background-image: url("/src/assets/hedaer-bg-2.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: inherit;
+}
+body::-webkit-scrollbar {
+  width: 8px; /* width of the entire scrollbar */
+}
+body::-webkit-scrollbar-track {
+  background: transparent; /* color of the tracking area */
+}
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(11, 227, 216); /* color of the scroll thumb */
+  border-radius: 20px; /* roundness of the scroll thumb */
+}
+.hero::before {
+  position: absolute;
+  content: "";
+  background: rgb(23, 212, 151);
+  background: linear-gradient(
+    90deg,
+    rgba(23, 212, 151, 1) 0%,
+    rgba(18, 222, 179, 1) 32%,
+    rgba(8, 247, 247, 1) 86%
+  );
+  inset: 0;
+  opacity: 0.7;
+  z-index: 1;
+}
+.banner {
+  position: absolute;
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%); /* Adjust for the element's height */
+}
+.resume,
+.blog-btn,
+.horizontal {
+  background: rgb(23, 212, 151);
+  background: linear-gradient(
+    90deg,
+    rgba(23, 212, 151, 1) 0%,
+    rgba(18, 222, 179, 1) 32%,
+    rgba(8, 247, 247, 1) 86%
+  );
+}
+.abtm,
+.int,
+.edu,
+.school,
+.skill-title,
+.testimonial {
+  background: rgb(23, 212, 151);
+  background: linear-gradient(
+    90deg,
+    rgba(23, 212, 151, 1) 0%,
+    rgba(18, 222, 179, 1) 32%,
+    rgba(8, 247, 247, 1) 86%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.circle {
+  width: 5.5rem;
+  height: 5.5rem;
+  border-radius: 50%;
+  border: #60efff 1px solid;
+  display: grid;
+  place-content: center;
+  color: #60efff;
+}
+.skill-icon {
+  border: #14e8c8 0.3rem solid;
+  width: 9rem;
+  height: 9rem;
+  transition: all linear 100ms;
+}
+.skill-img {
+  animation: breath 3s infinite linear;
+}
+@keyframes breath {
+  0% {
+    transform: scale(0.5);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.5);
+  }
+}
+.circle:hover,
+.skill-icon:hover {
+  background: rgb(23, 212, 151);
+  background: linear-gradient(
+    90deg,
+    rgba(23, 212, 151, 1) 0%,
+    rgba(18, 222, 179, 1) 32%,
+    rgba(8, 247, 247, 1) 86%
+  );
+  color: #ffffff;
+  /* color: #14e8c8; */
+}
+.project-show {
+  background-image: url("/src/assets/hedaer-bg-3.jpg");
+  position: relative;
+}
+.project-show::before {
+  content: "";
+  inset: 0;
+  position: absolute;
+  background-color: #02cfb4cb;
+}
+.project-grid {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+}
+.testimonisl-text::before,
+.testimonisl-text::after {
+  content: " ";
+  font-size: 2rem;
+  color: white;
+}
+.dash {
+  border-bottom: 0.2px solid rgb(160, 160, 160);
+}
