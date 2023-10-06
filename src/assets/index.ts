@@ -19,6 +19,8 @@ import teaching from "./teacher-explaining-while-sitting-on-armchair.png";
 import redux from "./redux.svg";
 import projectOverlay from "./hedaer-bg-3.jpg";
 import github from "./github.svg";
+import logo from "./logo-2.png";
+import logo2 from "./logo.png";
 
 export {
   facebook,
@@ -40,6 +42,8 @@ export {
   projectOverlay,
   projectHub,
   github,
+  logo,
+  logo2,
 };
 export const icons = [
   { icon: html, title: "html" },

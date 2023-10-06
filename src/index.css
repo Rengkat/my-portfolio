@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 @layer components {
+  .link {
+    @apply py-4 shadow text-xl text-white px-5 font-semibold hover:bg-[#247c5a] hover:px-6 transition-all duration-100 ease-linear;
+  }
   .circle-cont {
     @apply grid place-content-center;
   }
@@ -13,7 +16,25 @@
     @apply w-[3rem] h-[3rem] rounded-full p-3 bg-[#313741] grid place-content-center hover:bg-[#02cfb4] transition-all duration-150 ease-linear;
   }
   .footer-icon {
-    @apply text-[2rem] text-[#02cfb4] hover:text-[#313741] transition-all duration-100;
+    @apply text-[2rem] shadow text-[#02cfb4] hover:text-[#313741] transition-all duration-100;
+  }
+  .interest-icon {
+    @apply text-[5rem];
+  }
+  .label-detail {
+    @apply flex gap-4 items-center text-[17px] md:text-xl font-bold text-[#14e8c8];
+  }
+  .detail-info {
+    @apply flex gap-4 my-2 md:my-5;
+  }
+  .info-text {
+    @apply text-white text-[17px] md:text-xl font-semibold;
+  }
+  .skill-icon {
+    @apply border-[0.1rem] md:border-[0.3rem] border-[#14e8c8] w-[6.5rem] md:w-[9rem] h-[6.5rem] md:h-[9rem];
+  }
+  .send-btn {
+    @apply bg-[#313741] gap-2 text-[#02cfb4] border-2 border-[#02cfb4] py-4 md:py-5 font-semibold px-[3rem] md:px-[5rem] mt-[5rem] text-sm hover:bg-[#02cfb4] hover:text-white;
   }
 }
 
@@ -76,9 +97,11 @@ body::-webkit-scrollbar-thumb {
   top: 50%; /* Center vertically */
   transform: translateY(-50%); /* Adjust for the element's height */
 }
+
 .resume,
 .blog-btn,
-.horizontal {
+.horizontal,
+.nav-btn {
   background: rgb(23, 212, 151);
   background: linear-gradient(
     90deg,
@@ -113,12 +136,7 @@ body::-webkit-scrollbar-thumb {
   place-content: center;
   color: #60efff;
 }
-.skill-icon {
-  border: #14e8c8 0.3rem solid;
-  width: 9rem;
-  height: 9rem;
-  transition: all linear 100ms;
-}
+
 .skill-img {
   animation: breath 3s infinite linear;
 }
@@ -161,12 +179,12 @@ body::-webkit-scrollbar-thumb {
   left: 50%;
   top: 50%;
 }
-.testimonisl-text::before,
+/* .testimonisl-text::before,
 .testimonisl-text::after {
   content: " ";
   font-size: 2rem;
   color: white;
-}
+} */
 .dash {
   border-bottom: 0.2px solid rgb(160, 160, 160);
 }

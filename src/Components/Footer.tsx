@@ -27,8 +27,10 @@ const Footer = () => {
           <FaLinkedinIn className="footer-icon" />
         </a>
       </div>
-      <div className="dash w-[80%] mx-auto " />
-      <p className="text-center text-[#02cfb4] pt-5">COMEOUT © 2023. ALL RIGHTS RESERVED.</p>
+      <div className="dash w-[90%] md:w-[80%] mx-auto " />
+      <p className="text-center text-[#02cfb4] pt-5">
+        ALEXANDER RENGKAT © 2023. ALL RIGHTS RESERVED.
+      </p>
     </div>
   );
 };
