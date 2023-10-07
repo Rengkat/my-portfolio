@@ -20,21 +20,3 @@ const HireMe = () => {
 };
 
 export default HireMe;
-/*
-
-  <div className="bg-[#02cfb4] text-[#22252c] py-[5rem]">
-      <div className="flex flex-col md:flex-row  w-[90%] md:w-[80%] mx-auto">
-        <div className="flex ">
-          <BsSendFill className="text-[4rem] -mr-12 md:-mr-0 md:-mt-5 " />
-          <div className="w-full md:w-[60%] text-center">
-            <h1 className="font-bold text-2xl md:text-4xl ">HIRE ME FOR YOUR AWESOME PROJECT</h1>
-            <p>I am available for Freelance projects that depends on your project value.</p>
-            <p>Hire me and get your project done!</p>
-          </div>
-        </div>
-        <button className="bg-[#22252c] shadow text-[#02cfb4] py-4 px-10 text-2xl w-1/2 mx-auto ">
-          HIRE ME
-        </button>
-      </div>
-    </di v>
-*/

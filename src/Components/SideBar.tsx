@@ -33,13 +33,13 @@ const SideBar = () => {
         <Link to={"#"} className="link">
           Skills
         </Link>
-        <Link to={"#"} className="link">
+        <Link to={"/projects"} className="link">
           Projects
         </Link>
         <Link to={"#"} className="link">
           Testimonial
         </Link>
-        <Link to={"#"} className="link">
+        <Link to={"/blogs"} className="link">
           Blogs
         </Link>
       </nav>

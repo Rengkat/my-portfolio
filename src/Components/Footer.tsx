@@ -5,7 +5,7 @@ import { FaInstagramSquare } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
 const Footer = () => {
   return (
-    <div className="bg-[#22252c] pb-[2rem]">
+    <div className="bg-[#22252c] py-[5rem]">
       <div className="w-[40%] mx-auto flex justify-center gap-8 pb-[5rem]">
         <a href="https://github.com/Rengkat" className="footer-a">
           <VscGithub className="footer-icon" />

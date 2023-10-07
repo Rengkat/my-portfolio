@@ -1,27 +1,39 @@
-# React + TypeScript + Vite
+# Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
 
-Currently, two official plugins are available:
+Welcome to my portfolio! This project serves as a showcase of my skills and experience as a front-end developer. As a graduate in Chemistry and Education with a Master's degree in Chemistry and Education, I bring a unique perspective and a strong foundation in problem-solving to my web development work.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Technologies Used
 
-## Expanding the ESLint configuration
+- **Frontend:** React.js, TypeScript, Next.js
+- **Styling:** Tailwind CSS
+- **State Management:** Context API, useReducer
+- **Content Management:** Sanity.io
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Features
 
-- Configure the top-level `parserOptions` property like this:
+- **Responsive Design:** The portfolio is designed to be fully responsive, ensuring a seamless experience across various devices and screen sizes.
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+- **State Management:** I've implemented state management using the Context API and useReducer, making the application's state management efficient and organized.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- **Content Management:** Content updates and management are a breeze thanks to the integration of Sanity.io, allowing me to focus on delivering high-quality content.
+
+## How to Use
+
+1. Clone this repository to your local machine.
+2. Install dependencies using `npm install`.
+3. Run the development server using `npm run dev`.
+4. Visit `http://localhost:3000` in your browser to view the portfolio.
+
+## Contact
+
+If you have any questions, suggestions, or collaboration opportunities, please feel free to reach out to me:
+
+- **Email:** alexrengkat@gmail.com
+- **LinkedIn:** [Your LinkedIn Profile]
+- **GitHub:** [Your GitHub Profile]
+
+## License
+
+This project is licensed under the [License Name] - see the [LICENSE](LICENSE) file for details.

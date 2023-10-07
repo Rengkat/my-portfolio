@@ -97,3 +97,52 @@ export const someProjects = [
     image: projectHub,
   },
 ];
+interface Blog {
+  title: string;
+  data: string;
+  link: string;
+  summary: string;
+  image: string;
+}
+export const someBlogs: Blog[] = [
+  {
+    title: "Montu is Going to Breakup with Tuntuni",
+    data: "18, March, 2017",
+    link: "",
+    summary:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do it eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    image: projectHub,
+  },
+  {
+    title: "Montu is Going to Breakup with Tuntuni",
+    data: "18, March, 2017",
+    link: "",
+    summary:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do it eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    image: projectHub,
+  },
+  {
+    title: "Montu is Going to Breakup with Tuntuni",
+    data: "18, March, 2017",
+    link: "",
+    summary:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do it eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    image: projectHub,
+  },
+  {
+    title: "Montu is Going to Breakup with Tuntuni",
+    data: "18, March, 2017",
+    link: "",
+    summary:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do it eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    image: projectHub,
+  },
+  {
+    title: "Montu is Going to Breakup with Tuntuni",
+    data: "18, March, 2017",
+    link: "",
+    summary:
+      "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do it eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    image: projectHub,
+  },
+];

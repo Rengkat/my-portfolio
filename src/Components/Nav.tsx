@@ -4,7 +4,7 @@ const Nav = () => {
   return (
     <>
       <div className="nav fixed top-0 w-full z-[5]">
-        <div className="w-[90%] md:w-[75%] mx-auto flex justify-between">
+        <div className="w-[90%] md:w-[75%] mx-auto flex justify-between py-[1.5rem]">
           <ul className="flex list-none gap-5">
             <li>
               <a target="_blank" href="https://github.com/Rengkat" className=" w-5 h-5">
@@ -40,23 +40,6 @@ const Nav = () => {
             </aside>
           </header>
         </div>
-        {/* <nav className="flex ">
-          <Link to={"/"} className="link">
-            About
-          </Link>
-          <Link to={"#"} className="link">
-            Resume
-          </Link>
-          <Link to={"#"} className="link">
-            Portfolio
-          </Link>
-          <Link to={"#"} className="link">
-            Blogs
-          </Link>
-          <Link to={"#"} className="link">
-            Contact
-          </Link>
-        </nav> */}
       </div>
     </>
   );
