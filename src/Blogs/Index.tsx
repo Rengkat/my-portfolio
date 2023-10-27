@@ -3,13 +3,7 @@ import { Fragment } from "react";
 import Nav from "../Components/Nav";
 import { someBlogs } from "../assets";
 import Blog from "./Blog";
-// interface Blog {
-//   title: string;
-//   data: string;
-//   link: string;
-//   summary: string;
-//   image: string;
-// }
+
 const categories = ["HTML", "CSS", "JavaScript", "React.js", "Next.js", "Uncategorized"];
 const Blogs = () => {
   return (

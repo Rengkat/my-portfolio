@@ -9,7 +9,7 @@ const BlogsShowcase = () => {
         BLOG POSTS{" "}
       </h1>
       <div className="w-[90%] md:w-[85%] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center gap-5 ">
-        {blogs.slice(0, 3).map((blog, index) => {
+        {blogs.slice(0, 3).map((_, index) => {
           return (
             <Fragment key={index}>
               <SingleBlog />

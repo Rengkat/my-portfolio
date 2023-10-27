@@ -1,4 +1,3 @@
-import React from "react";
 import { projectHub } from "../assets";
 import { MdChevronRight } from "react-icons/md";
 

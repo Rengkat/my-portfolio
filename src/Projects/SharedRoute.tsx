@@ -1,10 +1,8 @@
-import React from "react";
 import { Outlet } from "react-router-dom";
 import Nav from "../Components/Nav";
 import HeroComponent from "../Components/HeroComponent";
 
 const SharedProjectRoute = () => {
-  
   return (
     <div className="bg-[#22252c]">
       <Nav />
