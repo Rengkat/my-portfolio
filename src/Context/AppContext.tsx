@@ -9,7 +9,7 @@ interface AppState extends State {
   openMainNav: () => void;
 }
 const initialState: State = {
-  isMainMenuOpen: false,
+  isMainMenuOpen: true,
   isSubMenuOpen: false,
 };
 export const AppContext = createContext<AppState | null>(null);

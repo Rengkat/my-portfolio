@@ -1,4 +1,4 @@
-import { personalImage } from "../assets";
+import { personalImage3 } from "../assets";
 import AutoStoriesIcon from "@mui/icons-material/AutoStories";
 import AudiotrackIcon from "@mui/icons-material/Audiotrack";
 import FlightIcon from "@mui/icons-material/Flight";
@@ -18,9 +18,9 @@ const AboutMe = () => {
         <aside className="my-[2rem] md:w-[50%]">
           <div className="border-[.3rem] border-[#14e8c8] w-full md:w-[90%] md:h-full ">
             <img
-              src={personalImage}
+              src={personalImage3}
               alt="personal Image"
-              className="w-[80%] md:h-full  object-cover"
+              className="w-[100%] md:h-full  object-cover"
             />
           </div>
           <button className="resume text-white text-xl font-bold py-3 px-6 my-5 shadow-lg hover:shadow-2xl">

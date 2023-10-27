@@ -36,6 +36,12 @@
   .send-btn {
     @apply bg-[#313741] gap-2 text-[#02cfb4] border-2 border-[#02cfb4] py-4 md:py-5 font-semibold px-[3rem] md:px-[5rem] mt-[5rem] text-sm hover:bg-[#02cfb4] hover:text-white;
   }
+  .project-nav {
+    @apply px-2 md:px-5 border-r-2 border-[#02cfb4] text-white font-semibold cursor-pointer;
+  }
+  .single-pro-icon {
+    @apply text-5xl border-[1px] border-[#14e8c8] p-2 rounded-full text-[#14e8c8] hover:text-white hover:bg-[#14e8c8] transition-all duration-200 ease-linear;
+  }
 }
 
 .bar {
@@ -116,7 +122,8 @@ body::-webkit-scrollbar-thumb {
 .school,
 .skill-title,
 .testimonial,
-.proj-hero {
+.proj-hero,
+.subpro {
   background: rgb(23, 212, 151);
   background: linear-gradient(
     90deg,
@@ -176,9 +183,6 @@ body::-webkit-scrollbar-thumb {
 }
 .project-grid {
   position: absolute;
-  transform: translate(-50%, -50%);
-  left: 50%;
-  top: 50%;
 }
 
 .dash {
@@ -197,4 +201,22 @@ body::-webkit-scrollbar-thumb {
   inset: 0;
   background: #0000009f;
   z-index: 2;
+}
+.project-relative {
+  position: relative;
+  border: 0.5rem solid transparent;
+  transition: border 1s;
+}
+.project-overlay {
+  position: absolute;
+  inset: 0;
+  background: white;
+  transform: scale(0);
+  transition: transform 500ms;
+}
+.project-relative:hover {
+  border: 0.5rem solid #b8e8dc7c;
+}
+.project-relative:hover .project-overlay {
+  transform: scale(1);
 }

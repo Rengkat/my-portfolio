@@ -12,7 +12,7 @@ const BlogsShowcase = () => {
         {blogs.slice(0, 3).map((blog, index) => {
           return (
             <Fragment key={index}>
-              <SingleBlog blog={blog} />
+              <SingleBlog />
             </Fragment>
           );
         })}

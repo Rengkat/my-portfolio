@@ -21,8 +21,8 @@ const Blogs = () => {
           subHeading="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae velit at odit nihil
           quidem quo quae."
         />
-        <main className="flex flex-col md:flex-row w-[76%] py-[3rem] mx-auto gap-3">
-          <aside className="w-full md:w-[70%] ">
+        <main className="flex flex-col lg:flex-row w-[90%] xl:w-[75%] py-[3rem] mx-auto gap-3">
+          <aside className="w-full lg:w-[70%] ">
             <div className="w-full">
               {someBlogs.map((blog, index) => {
                 return (
@@ -33,12 +33,12 @@ const Blogs = () => {
               })}
             </div>
           </aside>
-          <aside className="w-full md:w-[30%] py-[3rem] px-[1rem]">
+          <aside className="w-full md:w-[50%] lg:w-[30%]  py-[3rem] px-[1rem]">
             <div className="w-full flex">
               <input
                 type="text"
                 placeholder="Enter keyword..."
-                className="w-[70%] py-3 px-2 outline-none"
+                className="w-[70%] py-3 px-2 outline-none bg-transparent border-[1px] "
               />
               <button className="w-[30%] bg-[#02cfb4] text-white font-semibold">Search</button>
             </div>

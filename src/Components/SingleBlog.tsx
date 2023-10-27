@@ -2,7 +2,8 @@ import React from "react";
 import { projectHub } from "../assets";
 import { MdChevronRight } from "react-icons/md";
 
-const SingleBlog = ({ blog }: { blog: any }) => {
+const SingleBlog = () => {
+  // console.log(blog);
   return (
     <div className="bg-[#313741] shadow my-10 md:my-0">
       <img src={projectHub} alt="" />

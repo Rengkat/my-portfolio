@@ -30,7 +30,7 @@ const Skills = () => {
         </div>
       </div>
       <h1 className="edu font-bold text-3xl md:text-5xl text-center pt-[8rem] md:pt-[15rem]">
-        PROFESSIONAL SKILLS{" "}
+        SOME OF MY WORKS
       </h1>
     </div>
   );

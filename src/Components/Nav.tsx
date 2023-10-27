@@ -1,6 +1,13 @@
+import { useContext } from "react";
 import { facebook, github, instagram, linkedin, twitter } from "../assets";
+import { AppContext } from "../Context/AppContext";
 
 const Nav = () => {
+  const context = useContext(AppContext);
+  const openMainNav = context?.openMainNav;
+  const handleClick = () => {
+    openMainNav?.();
+  };
   return (
     <>
       <div className="nav fixed top-0 w-full z-[5]">
@@ -33,7 +40,7 @@ const Nav = () => {
             </li>
           </ul>
           <header className="cursor-pointer">
-            <aside className="menu w-8 flex flex-col gap-[.3rem]">
+            <aside onClick={handleClick} className="menu w-8 flex flex-col gap-[.3rem]">
               <div className="bar w-[80%]"></div>
               <div className="bar"></div>
               <div className="bar w-[60%]"></div>

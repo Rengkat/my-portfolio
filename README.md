@@ -32,8 +32,8 @@ If you have any questions, suggestions, or collaboration opportunities, please f
 
 - **Email:** alexrengkat@gmail.com
 - **LinkedIn:** [Your LinkedIn Profile]
-- **GitHub:** [Your GitHub Profile]
+- **GitHub:** https://github.com/Rengkat
 
 ## License
 
-This project is licensed under the [License Name] - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the Alexander Rengkat
