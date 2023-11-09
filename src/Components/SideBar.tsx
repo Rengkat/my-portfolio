@@ -1,12 +1,24 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { logo2 } from "../assets";
 import CloseIcon from "@mui/icons-material/Close";
 import { AppContext } from "../Context/AppContext";
 import { useContext } from "react";
+
 const SideBar = () => {
   const context = useContext(AppContext);
   const openMainNav = context?.openMainNav;
-
+  const location = useLocation();
+  // console.log(location);
+  const homeRoute =
+    location.pathname !== "/" ? (
+      <Link to={"/"} className="link">
+        Home
+      </Link>
+    ) : (
+      <a href="#home" className="link">
+        Home
+      </a>
+    );
   return (
     <div className="w-[50%] md:w-[40%] lg:w-[25%] xl:w-[20%] h-full bg-[#1c9d6c]">
       <div className="flex justify-between items-center shadow pb-[3rem] px-5 pt-5">
@@ -25,30 +37,28 @@ const SideBar = () => {
         />
       </div>
       <nav onClick={() => openMainNav?.()} className="flex flex-col">
-        <Link to={"/"} className="link">
-          Home
-        </Link>
-        <Link to={"#"} className="link">
+        {homeRoute}
+        <a href="#about" className="link">
           About
-        </Link>
-        <Link to={"#"} className="link">
+        </a>
+        <a href="#education" className="link">
           Education
-        </Link>
-        <Link to={"#"} className="link">
+        </a>
+        <a href="#experiences" className="link">
           Experiences
-        </Link>
-        <Link to={"#"} className="link">
+        </a>
+        <a href="#skills" className="link">
           Skills
-        </Link>
-        <Link to={"/projects"} className="link">
+        </a>
+        <a href="#projects" className="link">
           Projects
-        </Link>
-        <Link to={"#"} className="link">
+        </a>
+        <a href="#testimonials" className="link">
           Testimonial
-        </Link>
-        <Link to={"/blogs"} className="link">
+        </a>
+        <a href="#blogs" className="link">
           Blogs
-        </Link>
+        </a>
       </nav>
     </div>
   );

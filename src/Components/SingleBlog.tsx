@@ -4,7 +4,7 @@ import { MdChevronRight } from "react-icons/md";
 const SingleBlog = () => {
   // console.log(blog);
   return (
-    <div className="bg-[#313741] shadow my-10 md:my-0">
+    <div className="bg-[#313741] shadow my-5 md:my-0">
       <img src={projectHub} alt="" />
       <div className="text-white p-5">
         <h1 className="text-[#02cfb4] font-semibold text-xl py-[5px]">

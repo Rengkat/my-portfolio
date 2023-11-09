@@ -21,6 +21,13 @@ import github from "./github.svg";
 import logo from "./logo-2.png";
 import logo2 from "./logo.png";
 import personalImage3 from "./meBack.jpg";
+import AutoStoriesIcon from "@mui/icons-material/AutoStories";
+import AudiotrackIcon from "@mui/icons-material/Audiotrack";
+import FlightIcon from "@mui/icons-material/Flight";
+import CastForEducationIcon from "@mui/icons-material/CastForEducation";
+import SchoolIcon from "@mui/icons-material/School";
+import LiveTvIcon from "@mui/icons-material/LiveTv";
+import gretch from "./gretch.png";
 
 export {
   facebook,
@@ -44,6 +51,7 @@ export {
   logo,
   logo2,
   personalImage3,
+  gretch,
 };
 export const icons = [
   { icon: html, title: "html" },
@@ -174,5 +182,36 @@ export const testimonials = [
     id: "GHAN0oawen45pyhi",
     testimony:
       "In recent years, both problem-based learning and Collaborative learning strategies have gained popularity as effective alternatives to traditional instruction in chemistry education",
+  },
+];
+
+export type Interest = {
+  text: string;
+  icon: OverridableComponent<SvgIconTypeMap<"svg">> & { muiName: string };
+};
+export const interests: Interest[] = [
+  {
+    icon: AutoStoriesIcon,
+    text: "Reading",
+  },
+  {
+    icon: AudiotrackIcon,
+    text: "Music",
+  },
+  {
+    icon: FlightIcon,
+    text: "Travel",
+  },
+  {
+    icon: CastForEducationIcon,
+    text: "Teaching",
+  },
+  {
+    icon: SchoolIcon,
+    text: "Learning",
+  },
+  {
+    icon: LiveTvIcon,
+    text: "Movies",
   },
 ];

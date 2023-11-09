@@ -7,10 +7,10 @@ import TimelineContent from "@mui/lab/TimelineContent";
 import TimelineOppositeContent from "@mui/lab/TimelineOppositeContent";
 import TimelineDot from "@mui/lab/TimelineDot";
 import Typography from "@mui/material/Typography";
-
+import { motion } from "framer-motion";
 const Experiences = () => {
   return (
-    <div className="bg-[#22252c] py-[5rem]">
+    <div id="experiences" className="bg-[#22252c] py-[5rem] scroll-mt-40">
       <div className="w-[95%] md:w-[80%] mx-auto">
         <h1 className="edu font-bold text-3xl md:text-5xl text-center mt-[4rem] mb-[6rem]">
           EXPERIENCES{" "}
@@ -30,40 +30,16 @@ const Experiences = () => {
             </TimelineItem>
             <TimelineItem position="right" sx={{}}>
               <TimelineOppositeContent className=" hidden lg:block">
-                <h1 className="text-[#14e8c8] font-bold text-xl md:text-3xl">
-                  FRONT-END DEVELOPER
-                </h1>
-                <h3 className="text-white">YOSRIS AFRICA, LAGOS, NIGERIA | 2021 - PRESENT</h3>
-              </TimelineOppositeContent>
-              <TimelineSeparator>
-                <div className="w-[2rem] h-[2rem] rounded-full border-2 border-[#14e8c8] grid place-content-center">
-                  <TimelineDot sx={{ background: "#14e8c8" }} />
-                </div>
-                <TimelineConnector
-                  sx={{ height: "12rem", width: ".3rem", background: "#14e8c8" }}
-                />
-              </TimelineSeparator>
-              <TimelineContent>
-                <div className="lg:hidden mb-3">
+                <motion.div
+                  initial={{ x: -100, opacity: 0 }}
+                  whileInView={{ x: 0, y: 0, opacity: 1 }}
+                  transition={{ duration: 1, type: "tween" }}
+                  viewport={{ once: true }}>
                   <h1 className="text-[#14e8c8] font-bold text-xl md:text-3xl">
                     FRONT-END DEVELOPER
                   </h1>
                   <h3 className="text-white">YOSRIS AFRICA, LAGOS, NIGERIA | 2021 - PRESENT</h3>
-                </div>
-                <div className="text-white text-sm md:text-base">
-                  I hold a Master of Science and Education in Chemistry from the University of
-                  Nigeria, Nsukka, showcasing my expertise and dedication to advancing my knowledge
-                  in the field of chemistry.
-                </div>
-              </TimelineContent>
-            </TimelineItem>
-            <TimelineItem position="right" sx={{}}>
-              <TimelineOppositeContent className="hidden lg:block">
-                <div className="text-white text-sm md:text-base">
-                  I hold a Master of Science and Education in Chemistry from the University of
-                  Nigeria, Nsukka, showcasing my expertise and dedication to advancing my knowledge
-                  in the field of chemistry.
-                </div>
+                </motion.div>
               </TimelineOppositeContent>
               <TimelineSeparator>
                 <div className="w-[2rem] h-[2rem] rounded-full border-2 border-[#14e8c8] grid place-content-center">
@@ -74,30 +50,81 @@ const Experiences = () => {
                 />
               </TimelineSeparator>
               <TimelineContent>
-                <div>
-                  <h1 className="text-[#14e8c8] font-bold text-xl md:text-3xl">
-                    WORDPRESS DESIGNER/ BLOGGER
-                  </h1>
-                  <h3 className="text-white mb-3 lg:mb-0">
-                    HEADLINE NEWS, LAGOS, NIGERIA | 2021 - 2023
-                  </h3>
-                </div>
-
-                <Typography className="text-white lg:hidden text-sm md:text-base">
+                <motion.div
+                  initial={{ x: 100, opacity: 0 }}
+                  whileInView={{ x: 0, y: 0, opacity: 1 }}
+                  transition={{ duration: 1, type: "tween" }}
+                  viewport={{ once: true }}>
+                  <div className="lg:hidden mb-3">
+                    <h1 className="text-[#14e8c8] font-bold text-xl md:text-3xl">
+                      FRONT-END DEVELOPER
+                    </h1>
+                    <h3 className="text-white">YOSRIS AFRICA, LAGOS, NIGERIA | 2021 - PRESENT</h3>
+                  </div>
+                  <div className="text-white text-sm md:text-base">
+                    I hold a Master of Science and Education in Chemistry from the University of
+                    Nigeria, Nsukka, showcasing my expertise and dedication to advancing my
+                    knowledge in the field of chemistry.
+                  </div>
+                </motion.div>
+              </TimelineContent>
+            </TimelineItem>
+            <TimelineItem position="right" sx={{}}>
+              <TimelineOppositeContent className="hidden lg:block">
+                <motion.div
+                  className="text-white text-sm md:text-base"
+                  initial={{ x: -100, opacity: 0 }}
+                  whileInView={{ x: 0, y: 0, opacity: 1 }}
+                  transition={{ duration: 1, type: "tween" }}
+                  viewport={{ once: true }}>
                   I hold a Master of Science and Education in Chemistry from the University of
                   Nigeria, Nsukka, showcasing my expertise and dedication to advancing my knowledge
                   in the field of chemistry.
-                </Typography>
+                </motion.div>
+              </TimelineOppositeContent>
+              <TimelineSeparator>
+                <div className="w-[2rem] h-[2rem] rounded-full border-2 border-[#14e8c8] grid place-content-center">
+                  <TimelineDot sx={{ background: "#14e8c8" }} />
+                </div>
+                <TimelineConnector
+                  sx={{ height: "12rem", width: ".3rem", background: "#14e8c8" }}
+                />
+              </TimelineSeparator>
+              <TimelineContent>
+                <motion.div
+                  initial={{ x: 100, opacity: 0 }}
+                  whileInView={{ x: 0, y: 0, opacity: 1 }}
+                  transition={{ duration: 1, type: "tween" }}
+                  viewport={{ once: true }}>
+                  <div>
+                    <h1 className="text-[#14e8c8] font-bold text-xl md:text-3xl">
+                      WORDPRESS DESIGNER/ BLOGGER
+                    </h1>
+                    <h3 className="text-white mb-3 lg:mb-0">
+                      HEADLINE NEWS, LAGOS, NIGERIA | 2021 - 2023
+                    </h3>
+                  </div>
+
+                  <Typography className="text-white lg:hidden text-sm md:text-base">
+                    I hold a Master of Science and Education in Chemistry from the University of
+                    Nigeria, Nsukka, showcasing my expertise and dedication to advancing my
+                    knowledge in the field of chemistry.
+                  </Typography>
+                </motion.div>
               </TimelineContent>
             </TimelineItem>
             <TimelineItem position="right" sx={{}}>
               <TimelineOppositeContent className="hidden lg:block">
-                <div>
+                <motion.div
+                  initial={{ x: -100, opacity: 0 }}
+                  whileInView={{ x: 0, y: 0, opacity: 1 }}
+                  transition={{ duration: 1, type: "tween" }}
+                  viewport={{ once: true }}>
                   <h1 className="text-[#14e8c8] font-bold text-xl md:text-3xl">
                     YOUTUBE CONTENT CREATOR
                   </h1>
                   <h3 className="text-white">THE CATALYST | 2020 - Present</h3>
-                </div>
+                </motion.div>
               </TimelineOppositeContent>
               <TimelineSeparator>
                 <div className="w-[2rem] h-[2rem] rounded-full border-2 border-[#14e8c8] grid place-content-center">
@@ -108,32 +135,43 @@ const Experiences = () => {
                 />
               </TimelineSeparator>
               <TimelineContent>
-                <div className="lg:hidden mb-3">
-                  <h1 className="text-[#14e8c8] font-bold text-xl md:text-3xl">
-                    YOUTUBE CONTENT CREATOR
-                  </h1>
-                  <h3 className="text-white">THE CATALYST | 2020 - Present</h3>
-                </div>
-                <div className="text-white text-sm md:text-base">
-                  I have completed a series of comprehensive online courses and certifications to
-                  enhance my skills in web development and programming. These courses include:
-                </div>
-                <ul className="text-white list-disc ml-5 text-sm md:text-base">
-                  <li>Front-end Fundamentals from Purple.com</li>
-                  <li>Modern JavaScript From The Beginning by Brad Traversy on Udemy.</li>
-                  <li>
-                    The Complete JavaScript Course: From Zero to Expert! by Jonson Schmedtmann on
-                    Udemy.
-                  </li>
-                </ul>
+                <motion.div
+                  initial={{ x: 100, opacity: 0 }}
+                  whileInView={{ x: 0, y: 0, opacity: 1 }}
+                  transition={{ duration: 1, type: "tween" }}
+                  viewport={{ once: true }}>
+                  <div className="lg:hidden mb-3">
+                    <h1 className="text-[#14e8c8] font-bold text-xl md:text-3xl">
+                      YOUTUBE CONTENT CREATOR
+                    </h1>
+                    <h3 className="text-white">THE CATALYST | 2020 - Present</h3>
+                  </div>
+                  <div className="text-white text-sm md:text-base">
+                    I have completed a series of comprehensive online courses and certifications to
+                    enhance my skills in web development and programming. These courses include:
+                  </div>
+                  <ul className="text-white list-disc ml-5 text-sm md:text-base">
+                    <li>Front-end Fundamentals from Purple.com</li>
+                    <li>Modern JavaScript From The Beginning by Brad Traversy on Udemy.</li>
+                    <li>
+                      The Complete JavaScript Course: From Zero to Expert! by Jonson Schmedtmann on
+                      Udemy.
+                    </li>
+                  </ul>
+                </motion.div>
               </TimelineContent>
             </TimelineItem>
             <TimelineItem position="right" sx={{}}>
               <TimelineOppositeContent className="hidden lg:block">
-                <div className="text-white text-sm md:text-base">
+                <motion.div
+                  className="text-white text-sm md:text-base"
+                  initial={{ x: -100, opacity: 0 }}
+                  whileInView={{ x: 0, y: 0, opacity: 1 }}
+                  transition={{ duration: 1, type: "tween" }}
+                  viewport={{ once: true }}>
                   I have completed a series of comprehensive online courses and certifications to
                   enhance my skills in web development and programming. These courses include:
-                </div>
+                </motion.div>
               </TimelineOppositeContent>
               <TimelineSeparator>
                 <div className="w-[2rem] h-[2rem] rounded-full border-2 border-[#14e8c8] grid place-content-center">
@@ -144,16 +182,22 @@ const Experiences = () => {
                 />
               </TimelineSeparator>
               <TimelineContent>
-                <div className="mb-3 lg:mb-0">
-                  <h1 className="text-[#14e8c8] font-bold text-xl md:text-3xl">
-                    MATHEMATICS/ CHEMISTRY INSTRUCTOR
-                  </h1>
-                  <h3 className="text-white">NATIONAL YOUTH SERVICE CORP | 2018 - 2019</h3>
-                </div>
-                <div className=" block lg:hidden text-white text-sm md:text-base">
-                  I have completed a series of comprehensive online courses and certifications to
-                  enhance my skills in web development and programming. These courses include:
-                </div>
+                <motion.div
+                  initial={{ x: 100, opacity: 0 }}
+                  whileInView={{ x: 0, y: 0, opacity: 1 }}
+                  transition={{ duration: 1, type: "tween" }}
+                  viewport={{ once: true }}>
+                  <div className="mb-3 lg:mb-0">
+                    <h1 className="text-[#14e8c8] font-bold text-xl md:text-3xl">
+                      MATHEMATICS/ CHEMISTRY INSTRUCTOR
+                    </h1>
+                    <h3 className="text-white">NATIONAL YOUTH SERVICE CORP | 2018 - 2019</h3>
+                  </div>
+                  <div className=" block lg:hidden text-white text-sm md:text-base">
+                    I have completed a series of comprehensive online courses and certifications to
+                    enhance my skills in web development and programming. These courses include:
+                  </div>
+                </motion.div>
               </TimelineContent>
             </TimelineItem>
             <TimelineItem className="-ml-[1rem] lg:-ml-[0rem]">

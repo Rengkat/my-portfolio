@@ -13,15 +13,17 @@ import Testimonials from "../Components/Testimonials";
 const Home = () => {
   return (
     <>
-      <Hero />
-      <AboutMe />
-      <Education />
-      <Experiences />
-      <Skills />
-      <ProjectShow />
-      <Testimonials />
-      <HireMe />
-      <BlogsShowcase />
+      <div id="top" className="scroll-smooth">
+        <Hero />
+        <AboutMe />
+        <Education />
+        <Experiences />
+        <Skills />
+        <ProjectShow />
+        <Testimonials />
+        <HireMe />
+        <BlogsShowcase />
+      </div>
     </>
   );
 };

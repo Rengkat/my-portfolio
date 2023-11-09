@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { facebook, github, instagram, linkedin, twitter } from "../assets";
 import { AppContext } from "../Context/AppContext";
-
+// import {his}
 const Nav = () => {
   const context = useContext(AppContext);
   const openMainNav = context?.openMainNav;

@@ -1,5 +1,5 @@
 import { MdChevronRight } from "react-icons/md";
-
+import { motion } from "framer-motion";
 interface Blog {
   title: string;
   data: string;
@@ -13,7 +13,12 @@ interface Props {
 
 const Blog = ({ singleBlog }: Props) => {
   return (
-    <article className="flex flex-col md:flex-row mt-[3rem] bg-[#313741] shadow">
+    <motion.article
+      className="flex flex-col md:flex-row mt-[3rem] bg-[#313741] shadow"
+      initial={{ y: 100, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
+      transition={{ type: "tween", duration: 1 }}
+      viewport={{ amount: 0.2, once: true }}>
       <img src={singleBlog.image} alt="" className="w-full md:w-[40%] object-cover" />
       <aside className="w-full md:w-[60%] p-5 text-white">
         <h1 className="font-bold text-2xl capitalize text-[#02cfb4]">{singleBlog.title}</h1>
@@ -24,7 +29,7 @@ const Blog = ({ singleBlog }: Props) => {
           <MdChevronRight />
         </button>
       </aside>
-    </article>
+    </motion.article>
   );
 };
 

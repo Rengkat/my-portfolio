@@ -14,7 +14,9 @@ const Testimonials = () => {
   }, [currentTestimonial, testimonials]);
   const singleTestimony = testimonials[currentTestimonial];
   return (
-    <div className="bg-[#22252c] pt-[4rem] md:pt-[6rem] pb-[6rem] md:pb-[10rem]">
+    <div
+      id="testimonials"
+      className="bg-[#22252c] pt-[4rem] md:pt-[6rem] pb-[6rem] md:pb-[10rem] scroll-mt-40">
       <h1 className="edu font-bold text-5xl text-center py-[5rem]">TESTIMONIALS </h1>
       <div className="w-[90%] md:w-[60%] h-[50vh] mx-auto flex flex-col items-center">
         <img

@@ -6,12 +6,6 @@
   .link {
     @apply py-4 shadow text-xl text-white px-5 font-semibold hover:bg-[#247c5a] hover:px-6 transition-all duration-100 ease-linear;
   }
-  .circle-cont {
-    @apply grid place-content-center;
-  }
-  .interest-title {
-    @apply text-center font-medium my-5 text-2xl text-white;
-  }
   .footer-a {
     @apply w-[3rem] h-[3rem] rounded-full p-3 bg-[#313741] grid place-content-center hover:bg-[#02cfb4] transition-all duration-150 ease-linear;
   }
@@ -41,6 +35,10 @@
   }
   .single-pro-icon {
     @apply text-5xl border-[1px] border-[#14e8c8] p-2 rounded-full text-[#14e8c8] hover:text-white hover:bg-[#14e8c8] transition-all duration-200 ease-linear;
+  }
+
+  html {
+    scroll-behavior: smooth;
   }
 }
 
@@ -181,9 +179,6 @@ body::-webkit-scrollbar-thumb {
   position: absolute;
   background-color: #02cfb4cb;
 }
-.project-grid {
-  position: absolute;
-}
 
 .dash {
   border-bottom: 0.2px solid rgb(160, 160, 160);
@@ -219,4 +214,23 @@ body::-webkit-scrollbar-thumb {
 }
 .project-relative:hover .project-overlay {
   transform: scale(1);
+}
+.circle-cont {
+  display: grid;
+  place-content: center;
+  /* transition: all 2s; */
+}
+.interest-title {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+  color: white;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 1s linear;
+}
+
+.circle-cont:hover .interest-title {
+  visibility: visible;
+  opacity: 1;
 }
