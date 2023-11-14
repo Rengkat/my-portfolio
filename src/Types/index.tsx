@@ -101,7 +101,7 @@ export type Action =
   | { type: "FETCH_TESTIMONIALS"; payload: Testimonials[] }
   | { type: "LOADING_TESTIMONIALS"; payload: boolean };
 
-export function formatDate(dateString: Date) {
+export function formatDate(dateString: Date | string) {
   // const options = { day: "numeric", month: "long", year: "numeric" };
   const date = new Date(dateString);
   const day = parseInt(date.toLocaleString("en-US", { day: "numeric" }), 10);
