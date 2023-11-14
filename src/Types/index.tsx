@@ -60,13 +60,7 @@ export interface Blog {
   externalUrl: string;
 }
 export interface Testimonials {
-  image: {
-    _type: "image";
-    asset: {
-      _ref: string;
-      _type: "reference";
-    };
-  };
+  image: Image;
   firstName: string;
   surname: string;
   _id: string;
