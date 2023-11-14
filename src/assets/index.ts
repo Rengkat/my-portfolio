@@ -105,89 +105,10 @@ export const someProjects = [
     image: projectHub,
   },
 ];
-interface Blog {
-  title: string;
-  data: string;
-  link: string;
-  summary: string;
-  image: string;
-}
-export const someBlogs: Blog[] = [
-  {
-    title: "Montu is Going to Breakup with Tuntuni",
-    data: "18, March, 2017",
-    link: "",
-    summary:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do it eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    image: projectHub,
-  },
-  {
-    title: "Montu is Going to Breakup with Tuntuni",
-    data: "18, March, 2017",
-    link: "",
-    summary:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do it eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    image: projectHub,
-  },
-  {
-    title: "Montu is Going to Breakup with Tuntuni",
-    data: "18, March, 2017",
-    link: "",
-    summary:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do it eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    image: projectHub,
-  },
-  {
-    title: "Montu is Going to Breakup with Tuntuni",
-    data: "18, March, 2017",
-    link: "",
-    summary:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do it eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    image: projectHub,
-  },
-  {
-    title: "Montu is Going to Breakup with Tuntuni",
-    data: "18, March, 2017",
-    link: "",
-    summary:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do it eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    image: projectHub,
-  },
-];
-export const testimonials = [
-  {
-    img: projectHub,
-    name: "Alexander Rengkat",
-    id: "1fhhy632y62783r8fvb",
-    testimony:
-      "was more effective than traditional instruction in promoting students' acquisition of laboratory skills and enhancing their learning experience in analytical chemistry. ",
-  },
-  {
-    img: nextjs,
-    name: "Kamshinen Joel",
-    id: "0rg83ndnvwu38rfns",
-    testimony:
-      " Similarly, a study by Zhang, Guo, and Zhao (2021) on collaborative learning and traditional instruction in promoting students' acquisition of laboratory skills and enhancing their learning experience in analytical chemistry found that Collaborative learning",
-  },
-  {
-    img: teaching,
-    name: "Nanmet Alexander",
-    id: "562ywehvwgkkf37rhaDD",
-    testimony:
-      "Moreover, it's important to consider the crucial role of achievement motivation and the acquisition of practical skills in the context of these innovative teaching methods. Problem-based and Collaborative learning approaches, by engaging students in real-world problem-solving and collaborative laboratory work, not only enhance their problem-solving and ",
-  },
-  {
-    img: chemistry,
-    name: "Israel Johna",
-    id: "GHAN0oawen45pyhi",
-    testimony:
-      "In recent years, both problem-based learning and Collaborative learning strategies have gained popularity as effective alternatives to traditional instruction in chemistry education",
-  },
-];
 
 export type Interest = {
   text: string;
-  icon: OverridableComponent<SvgIconTypeMap<"svg">> & { muiName: string };
+  icon: unknown;
 };
 export const interests: Interest[] = [
   {

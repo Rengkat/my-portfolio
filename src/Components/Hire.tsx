@@ -19,7 +19,7 @@ const HireMe = () => {
           </div>
         </div>
         <button className="bg-[#22252c] shadow text-[#02cfb4] py-4 px-12 text-2xl my-5 md:my-0">
-          HIRE ME
+          <a href="mailto:alexrengkat@gmail.com"> HIRE ME</a>
         </button>
       </motion.div>
     </div>

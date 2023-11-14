@@ -46,7 +46,7 @@ const Experiences = () => {
                   <TimelineDot sx={{ background: "#14e8c8" }} />
                 </div>
                 <TimelineConnector
-                  sx={{ height: "12rem", width: ".3rem", background: "#14e8c8" }}
+                  sx={{ height: "18rem", width: ".3rem", background: "#14e8c8" }}
                 />
               </TimelineSeparator>
               <TimelineContent>
@@ -62,9 +62,28 @@ const Experiences = () => {
                     <h3 className="text-white">YOSRIS AFRICA, LAGOS, NIGERIA | 2021 - PRESENT</h3>
                   </div>
                   <div className="text-white text-sm md:text-base">
-                    I hold a Master of Science and Education in Chemistry from the University of
-                    Nigeria, Nsukka, showcasing my expertise and dedication to advancing my
-                    knowledge in the field of chemistry.
+                    <ul className=" list-disc ml-2">
+                      <li>
+                        Created super admin dashboard using {""}
+                        <span className="tech-used">
+                          React, Redux Toolkit, styled components, Material UI, Redux Persist, and
+                          Recharts
+                        </span>
+                      </li>
+                      <li>
+                        Worked collaboratively in a 6-member cross-functional team, utilizing {""}
+                        <span className="tech-used">GitHub, Google Meet, and Slack </span>
+                      </li>
+                      <li>
+                        Evaluated 13+ UI/UX <span className="tech-used">Figma</span> designs for
+                        technical feasibility and improved implementation
+                      </li>
+                      <li>
+                        Expanded dashboard functionality by integrating 9+ APIs with {""}
+                        <span className="tech-used">Axios and createAsyncThunk</span> for data
+                        fetching
+                      </li>
+                    </ul>
                   </div>
                 </motion.div>
               </TimelineContent>
@@ -77,9 +96,25 @@ const Experiences = () => {
                   whileInView={{ x: 0, y: 0, opacity: 1 }}
                   transition={{ duration: 1, type: "tween" }}
                   viewport={{ once: true }}>
-                  I hold a Master of Science and Education in Chemistry from the University of
-                  Nigeria, Nsukka, showcasing my expertise and dedication to advancing my knowledge
-                  in the field of chemistry.
+                  <ul className=" list-disc text-justify">
+                    <li>
+                      Uploaded and published 20+ daily news stories and feature articles on
+                      <span className="tech-used"> WordPress</span> , resulting in increased page
+                      views and advertising revenue.
+                    </li>
+                    <li>
+                      Developed and maintained front-end components with{" "}
+                      <span className="tech-used">WordPress template</span>
+                      hierarchy, custom post types, and advanced custom fields, using{" "}
+                      <span className="tech-used">Elementor Page Builder</span> for a 35%
+                      improvement in website functionality and user satisfaction.
+                    </li>
+                    <li>
+                      Stayed updated on the latest <span className="tech-used">WordPress</span>{" "}
+                      developments, integrating new versions and security updates to decrease
+                      vulnerabilities and enhance website performance.
+                    </li>
+                  </ul>
                 </motion.div>
               </TimelineOppositeContent>
               <TimelineSeparator>
@@ -87,7 +122,7 @@ const Experiences = () => {
                   <TimelineDot sx={{ background: "#14e8c8" }} />
                 </div>
                 <TimelineConnector
-                  sx={{ height: "12rem", width: ".3rem", background: "#14e8c8" }}
+                  sx={{ height: "18rem", width: ".3rem", background: "#14e8c8" }}
                 />
               </TimelineSeparator>
               <TimelineContent>
@@ -106,9 +141,25 @@ const Experiences = () => {
                   </div>
 
                   <Typography className="text-white lg:hidden text-sm md:text-base">
-                    I hold a Master of Science and Education in Chemistry from the University of
-                    Nigeria, Nsukka, showcasing my expertise and dedication to advancing my
-                    knowledge in the field of chemistry.
+                    <ul className=" list-disc text-justify">
+                      <li>
+                        Uploaded and published 20+ daily news stories and feature articles on
+                        <span className="tech-used"> WordPress</span> , resulting in increased page
+                        views and advertising revenue.
+                      </li>
+                      <li>
+                        Developed and maintained front-end components with{" "}
+                        <span className="tech-used">WordPress template</span>
+                        hierarchy, custom post types, and advanced custom fields, using{" "}
+                        <span className="tech-used">Elementor Page Builder</span> for a 35%
+                        improvement in website functionality and user satisfaction.
+                      </li>
+                      <li>
+                        Stayed updated on the latest <span className="tech-used">WordPress</span>{" "}
+                        developments, integrating new versions and security updates to decrease
+                        vulnerabilities and enhance website performance.
+                      </li>
+                    </ul>
                   </Typography>
                 </motion.div>
               </TimelineContent>
@@ -131,7 +182,7 @@ const Experiences = () => {
                   <TimelineDot sx={{ background: "#14e8c8" }} />
                 </div>
                 <TimelineConnector
-                  sx={{ height: "20rem", width: ".3rem", background: "#14e8c8" }}
+                  sx={{ height: "16rem", width: ".3rem", background: "#14e8c8" }}
                 />
               </TimelineSeparator>
               <TimelineContent>
@@ -139,23 +190,27 @@ const Experiences = () => {
                   initial={{ x: 100, opacity: 0 }}
                   whileInView={{ x: 0, y: 0, opacity: 1 }}
                   transition={{ duration: 1, type: "tween" }}
-                  viewport={{ once: true }}>
-                  <div className="lg:hidden mb-3">
+                  viewport={{ once: true }}
+                  className="text-white text-sm md:text-base">
+                  <div className="lg:hidden mb-3 ">
                     <h1 className="text-[#14e8c8] font-bold text-xl md:text-3xl">
                       YOUTUBE CONTENT CREATOR
                     </h1>
                     <h3 className="text-white">THE CATALYST | 2020 - Present</h3>
                   </div>
-                  <div className="text-white text-sm md:text-base">
-                    I have completed a series of comprehensive online courses and certifications to
-                    enhance my skills in web development and programming. These courses include:
-                  </div>
-                  <ul className="text-white list-disc ml-5 text-sm md:text-base">
-                    <li>Front-end Fundamentals from Purple.com</li>
-                    <li>Modern JavaScript From The Beginning by Brad Traversy on Udemy.</li>
+                  <ul className=" list-disc ml-5">
                     <li>
-                      The Complete JavaScript Course: From Zero to Expert! by Jonson Schmedtmann on
-                      Udemy.
+                      Produced and published educational videos on chemistry and mathematics topics,
+                      garnering subscribers.
+                    </li>
+                    <li>
+                      Employed effective instructional strategies to break down complex mathematical
+                      and chemistry concepts in video content.
+                    </li>
+                    <li>
+                      Created video solutions for West African Examination Council, National
+                      Examination Council, and Joint Admission Matriculation Board Past Questions
+                      using Digital notepad and Microsoft whiteboard.
                     </li>
                   </ul>
                 </motion.div>
@@ -169,8 +224,22 @@ const Experiences = () => {
                   whileInView={{ x: 0, y: 0, opacity: 1 }}
                   transition={{ duration: 1, type: "tween" }}
                   viewport={{ once: true }}>
-                  I have completed a series of comprehensive online courses and certifications to
-                  enhance my skills in web development and programming. These courses include:
+                  <ul className=" list-disc ml-5 text-justify">
+                    <li>
+                      Improved overall student performance by 30% through effective lesson plans in
+                      <span className="tech-used">Further Mathematics and Chemistry</span>
+                    </li>
+                    <li>
+                      Employed effective instructional strategies to break down complex{" "}
+                      <span className="tech-used">mathematical and chemistry </span> concepts in
+                      video content.
+                    </li>
+                    <li>
+                      Enhanced student interest in <span className="tech-used">Chemistry</span>{" "}
+                      through engaging laboratory experiments, achieving a 75% pass rate in National
+                      examinations.
+                    </li>
+                  </ul>
                 </motion.div>
               </TimelineOppositeContent>
               <TimelineSeparator>
@@ -193,10 +262,22 @@ const Experiences = () => {
                     </h1>
                     <h3 className="text-white">NATIONAL YOUTH SERVICE CORP | 2018 - 2019</h3>
                   </div>
-                  <div className=" block lg:hidden text-white text-sm md:text-base">
-                    I have completed a series of comprehensive online courses and certifications to
-                    enhance my skills in web development and programming. These courses include:
-                  </div>
+                  <ul className=" list-disc ml-5 text-justify text-white text-sm md:text-base">
+                    <li>
+                      Improved overall student performance by 30% through effective lesson plans in
+                      <span className="tech-used">Further Mathematics and Chemistry</span>
+                    </li>
+                    <li>
+                      Employed effective instructional strategies to break down complex{" "}
+                      <span className="tech-used">mathematical and chemistry </span> concepts in
+                      video content.
+                    </li>
+                    <li>
+                      Enhanced student interest in <span className="tech-used">Chemistry</span>{" "}
+                      through engaging laboratory experiments, achieving a 75% pass rate in National
+                      examinations.
+                    </li>
+                  </ul>
                 </motion.div>
               </TimelineContent>
             </TimelineItem>

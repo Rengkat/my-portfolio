@@ -8,8 +8,7 @@ const SharedProjectRoute = () => {
       <Nav />
       <HeroComponent
         title="PROJECTS"
-        subHeading="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae velit at odit nihil
-          quidem quo quae."
+        subHeading="Exploring the intersection of creativity and technology – showcasing my journey in front-end development through diverse and impactful projects."
       />
       <div className="pb-[5rem]">
         <Outlet />

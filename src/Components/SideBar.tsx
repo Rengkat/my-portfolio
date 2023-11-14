@@ -59,6 +59,9 @@ const SideBar = () => {
         <a href="#blogs" className="link">
           Blogs
         </a>
+        <a href="#contact" className="link">
+          Contact
+        </a>
       </nav>
     </div>
   );

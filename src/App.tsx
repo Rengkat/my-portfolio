@@ -13,7 +13,7 @@ function App() {
         <Route index element={<Home />} />
         <Route path="projects" element={<SharedProjectRoute />}>
           <Route index element={<Projects />} />
-          <Route path=":id" element={<DetailProject />} />
+          <Route path=":slug" element={<DetailProject />} />
         </Route>
         <Route path="blogs" element={<Blogs />} />
       </Route>

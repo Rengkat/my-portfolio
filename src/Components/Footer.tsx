@@ -11,15 +11,15 @@ const Footer = () => {
           <VscGithub className="footer-icon" />
         </a>
 
-        <a href="#" className="footer-a">
+        <a href="https://twitter.com/RengkatAlex" className="footer-a">
           <FaTwitter className="footer-icon" />
         </a>
 
-        <a href="#" className="footer-a">
+        <a href="https://m.facebook.com/profile.php/?id=100006361571808" className="footer-a">
           <FaFacebookF className="footer-icon" />
         </a>
 
-        <a href="#" className="footer-a">
+        <a href="https://www.instagram.com/alexrengkat/" className="footer-a">
           <FaInstagramSquare className="footer-icon" />
         </a>
 

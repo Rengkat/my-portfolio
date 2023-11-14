@@ -78,9 +78,9 @@ const Education = () => {
                   whileInView={{ x: 0, y: 0, opacity: 1 }}
                   transition={{ duration: 1, type: "tween" }}
                   viewport={{ once: true }}>
-                  I hold a Master of Science and Education in Chemistry from the University of
-                  Nigeria, Nsukka, showcasing my expertise and dedication to advancing my knowledge
-                  in the field of chemistry.
+                  I Successfully completed a comprehensive four-year program at the University of
+                  Jos, earning a Bachelor's degree in Chemistry and Education, honing analytical and
+                  teaching skills.
                 </motion.div>
               </TimelineOppositeContent>
               <TimelineSeparator>
@@ -102,9 +102,9 @@ const Education = () => {
                     UNIVERSITY OF JOS, JOS, NIGERIA | 2021 - 2023
                   </h3>
                   <Typography className="text-white lg:hidden text-sm md:text-base">
-                    I hold a Master of Science and Education in Chemistry from the University of
-                    Nigeria, Nsukka, showcasing my expertise and dedication to advancing my
-                    knowledge in the field of chemistry.
+                    I Successfully completed a comprehensive four-year program at the University of
+                    Jos, earning a Bachelor's degree in Chemistry and Education, honing analytical
+                    and teaching skills.
                   </Typography>
                 </motion.div>
               </TimelineContent>

@@ -4,7 +4,7 @@
 
 @layer components {
   .link {
-    @apply py-4 shadow text-xl text-white px-5 font-semibold hover:bg-[#247c5a] hover:px-6 transition-all duration-100 ease-linear;
+    @apply block py-4 shadow text-xl text-white px-5 font-semibold hover:bg-[#247c5a] hover:px-6 transition-all duration-100 ease-linear;
   }
   .footer-a {
     @apply w-[3rem] h-[3rem] rounded-full p-3 bg-[#313741] grid place-content-center hover:bg-[#02cfb4] transition-all duration-150 ease-linear;
@@ -31,19 +31,21 @@
     @apply bg-[#313741] gap-2 text-[#02cfb4] border-2 border-[#02cfb4] py-4 md:py-5 font-semibold px-[3rem] md:px-[5rem] mt-[5rem] text-sm hover:bg-[#02cfb4] hover:text-white;
   }
   .project-nav {
-    @apply px-2 md:px-5 border-r-2 border-[#02cfb4] text-white font-semibold cursor-pointer;
+    @apply px-[5px] md:px-5 border-r-2 border-[#02cfb4] text-white font-semibold cursor-pointer;
   }
   .single-pro-icon {
     @apply text-5xl border-[1px] border-[#14e8c8] p-2 rounded-full text-[#14e8c8] hover:text-white hover:bg-[#14e8c8] transition-all duration-200 ease-linear;
   }
-
+  .tech-used {
+    @apply text-[#14e8c8];
+  }
   html {
     scroll-behavior: smooth;
   }
 }
 
 .bar {
-  background-color: black;
+  background-color: #fff;
   height: 0.2rem;
   transition: all 0.2s linear;
 }
