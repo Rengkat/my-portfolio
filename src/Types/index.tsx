@@ -9,13 +9,7 @@ export interface State {
 }
 export interface Project {
   subtitle: string;
-  mainImage: {
-    _type: "image";
-    asset: {
-      _ref: string;
-      _type: "reference";
-    };
-  };
+  mainImage: Image;
   githubLink: string;
   _id: string;
   title: string;
