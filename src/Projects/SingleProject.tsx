@@ -1,6 +1,5 @@
 import { PiGithubLogoFill } from "react-icons/pi";
 import LinkIcon from "@mui/icons-material/Link";
-// import { FaLink } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { Project } from "../Types";
 import { sanityImageUrl } from "../../lib/sanity";

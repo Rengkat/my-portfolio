@@ -3,25 +3,41 @@ import { FaLink, FaAngleRight, FaAngleLeft } from "react-icons/fa";
 import { useParams } from "react-router-dom";
 import { Fragment, useEffect, useState } from "react";
 import { Client, sanityImageUrl } from "../../lib/sanity";
-import { DetailProjectType } from "../Types";
+import { DetailProjectType, Image } from "../Types";
+//  imageSlider: {
+//    _type: "image";
+//    _key: string;
+//    asset: {
+//      _ref: string;
+//      _type: "reference";
+//    }
+//  }
+//  [];
+interface DetailPro extends DetailProjectType {
+  imageSlider: Image[];
+}
 const DetailProject = () => {
   const [isHover, setIsHover] = useState(false);
   const [currentImage, setCurrentImage] = useState(1);
   const { slug } = useParams();
-  const [project, setProject] = useState<DetailProjectType | null>(null);
+  const [project, setProject] = useState<DetailPro | null>(null);
   const [loading, setLoading] = useState(false);
 
   const handleClickLeft = () => {
-    if (currentImage <= 1) {
-      setCurrentImage(project?.imageSlider?.length + 1);
+    if (project?.imageSlider?.length) {
+      if (currentImage <= 1) {
+        setCurrentImage(project?.imageSlider?.length + 1);
+      }
+      setCurrentImage((prev) => prev - 1);
     }
-    setCurrentImage((prev) => prev - 1);
   };
   const handleClickRight = () => {
-    if (currentImage >= project?.imageSlider?.length) {
-      setCurrentImage(0);
+    if (project?.imageSlider?.length) {
+      if (currentImage >= project?.imageSlider?.length) {
+        setCurrentImage(0);
+      }
+      setCurrentImage((prev) => prev + 1);
     }
-    setCurrentImage((prev) => prev + 1);
   };
   useEffect(() => {
     const detailProject = async (slug: string | undefined) => {
@@ -66,7 +82,7 @@ const DetailProject = () => {
               onMouseOver={() => setIsHover(true)}
               onMouseOut={() => setIsHover(false)}
               className="w-full lg:w-[65%] h-[60%] md:h-[65vh] relative overflow-hidden border-[1px] border-slate-300">
-              {project?.imageSlider.map((image, index) => {
+              {project?.imageSlider.map((image: Image, index: number) => {
                 return (
                   <Fragment key={index}>
                     <div

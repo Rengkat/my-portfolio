@@ -84,7 +84,14 @@ export interface Testimonials {
   _id: string;
   testimony: string;
 }
-
+export interface Image {
+  _type: "image";
+  _key: string;
+  asset: {
+    _ref: string;
+    _type: "reference";
+  };
+}
 export type Action =
   | { type: "OPEN_MAIN_MENU"; payload?: boolean }
   | { type: "FETCH_PROJECTS"; payload: Project[] }
@@ -94,7 +101,7 @@ export type Action =
   | { type: "FETCH_TESTIMONIALS"; payload: Testimonials[] }
   | { type: "LOADING_TESTIMONIALS"; payload: boolean };
 
-export function formatDate(dateString: Date | string) {
+export function formatDate(dateString: Date) {
   // const options = { day: "numeric", month: "long", year: "numeric" };
   const date = new Date(dateString);
   const day = parseInt(date.toLocaleString("en-US", { day: "numeric" }), 10);

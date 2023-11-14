@@ -3,7 +3,7 @@ import LinkIcon from "@mui/icons-material/Link";
 import { Link } from "react-router-dom";
 import { Fragment, useContext } from "react";
 import { AppContext } from "../Context/AppContext";
-import { DetailProjectType } from "../Types";
+import { Project } from "../Types";
 import { sanityImageUrl } from "../../lib/sanity";
 const ProjectShow = () => {
   const { projects, projectsLoading } = useContext(AppContext);
@@ -16,7 +16,7 @@ const ProjectShow = () => {
           </div>
         ) : (
           <div className="w-full xl:w-[80%] p-[0.5rem] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
-            {projects.map((project: DetailProjectType) => {
+            {projects.map((project: Project) => {
               return (
                 <Fragment key={project._id}>
                   <div className="project-relative h-[50vh] lg:h-[40vh] w-full">
