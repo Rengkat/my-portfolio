@@ -28,6 +28,7 @@ import CastForEducationIcon from "@mui/icons-material/CastForEducation";
 import SchoolIcon from "@mui/icons-material/School";
 import LiveTvIcon from "@mui/icons-material/LiveTv";
 import gretch from "./gretch.png";
+import { SvgIconProps } from "@mui/material";
 
 export {
   facebook,
@@ -108,8 +109,9 @@ export const someProjects = [
 
 export type Interest = {
   text: string;
-  icon: unknown;
+  icon: React.ComponentType<SvgIconProps>;
 };
+
 export const interests: Interest[] = [
   {
     icon: AutoStoriesIcon,
