@@ -77,11 +77,11 @@ const DetailProject = () => {
             <div className="font-bold text-2xl text-white">Loading...</div>
           </div>
         ) : (
-          <div className="w-[95%] md:w-[80%] lg:w-[90%] xl:w-[75%] mx-auto pt-[5rem] flex flex-col lg:flex-row gap-[1.5rem]">
+          <div className="w-[95%] overflow-hidden md:w-[80%] lg:w-[90%] xl:w-[75%] mx-auto pt-[5rem] flex flex-col lg:flex-row gap-[1.5rem]">
             <aside
               onMouseOver={() => setIsHover(true)}
               onMouseOut={() => setIsHover(false)}
-              className="w-full lg:w-[65%] h-[60%] md:h-[65vh] relative overflow-hidden border-[1px] border-slate-300">
+              className="w-full lg:w-[65%] h-[30vh] md:h-[65vh] overflow-hidden relative border-[1px] border-slate-300">
               {project?.imageSlider.map((image: Image, index: number) => {
                 return (
                   <Fragment key={index}>
@@ -95,7 +95,7 @@ const DetailProject = () => {
                       }`}>
                       <img
                         src={sanityImageUrl(image).width(800).height(550).url()}
-                        className="w-[100%] h-[100%] object-cover "
+                        className="w-[100%] h-full object-cover border-[1px] border-[#ffffff7f] "
                       />
                     </div>
                   </Fragment>

@@ -8,7 +8,7 @@ const SingleBlog = ({ blog }: Props) => {
   const formattedDate = formatDate(blog.dateOfPublication);
 
   return (
-    <div className="bg-[#313741] shadow my-5 md:my-0">
+    <div className="bg-[#313741] shadow my-2 md:my-0">
       <img
         src={sanityImageUrl(blog.image).width(800).height(550).url()}
         // className="w-[100%] h-[100%] object-cover "

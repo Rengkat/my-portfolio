@@ -8,18 +8,18 @@ import { sanityImageUrl } from "../../lib/sanity";
 const ProjectShow = () => {
   const { projects, projectsLoading } = useContext(AppContext);
   return (
-    <div className="project-show h-[350vh] md:h-[190vh] lg:md:h-[120vh] ">
-      <div className="flex justify-center pt-[3rem]">
+    <div className="project-show py-[8rem]">
+      <div className="w-full xl:w-[80%] mx-auto">
         {projectsLoading ? (
           <div className="w-full h-full flex items-center justify-center">
             <div className="text-2xl font-bold text-white relative mt-[3rem]">Loading...</div>
           </div>
         ) : (
-          <div className="w-full xl:w-[80%] p-[0.5rem] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+          <div className="p-[0.5rem] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
             {projects.map((project: Project) => {
               return (
                 <Fragment key={project._id}>
-                  <div className="project-relative h-[50vh] lg:h-[40vh] w-full">
+                  <div className="project-relative h-[40vh] w-full">
                     <img
                       src={sanityImageUrl(project.mainImage).width(700).url()}
                       className="w-full h-full object-cover border-2 border-white"
@@ -47,15 +47,17 @@ const ProjectShow = () => {
             })}
           </div>
         )}
-        {!projectsLoading && (
-          <div className="w-full absolute bottom-[5rem] flex justify-center ]">
-            <Link to={"/projects"}>
-              <button className="bg-[#22252c] py-4 px-8 text-xl font-normal text-[#02cfb4] my-[5rem">
-                LOAD MORE
-              </button>
-            </Link>
-          </div>
-        )}
+        <div className="mt-[2rem]">
+          {!projectsLoading && (
+            <div className="w-full relative flex justify-center ]">
+              <Link to={"/projects"}>
+                <button className="bg-[#22252c] py-3 px-5 text-base md:py-4 md:px-8 md:text-xl font-normal text-[#02cfb4] my-[5rem hover:text-white hover:bg-[#383d48]">
+                  LOAD MORE
+                </button>
+              </Link>
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );

@@ -25,7 +25,9 @@ const Testimonials = () => {
         </div>
       ) : (
         <div className="pt-[4rem] md:pt-[6rem] pb-[6rem] md:pb-[10rem] ">
-          <h1 className="edu font-bold text-5xl text-center py-[5rem]">TESTIMONIALS </h1>
+          <h1 className="edu font-bold text-3xl md:text-5xl text-center py-[5rem]">
+            TESTIMONIALS{" "}
+          </h1>
           <div className="w-[90%] md:w-[60%] h-[50vh] mx-auto flex flex-col items-center relative overflow-hidden">
             {testimonials.map((testimonial, index) => {
               return (
@@ -55,7 +57,6 @@ const Testimonials = () => {
               );
             })}
           </div>
-          <button onClick={() => setCurrentTestimonial((prev) => prev + 1)}>CLICK</button>
         </div>
       )}
     </div>

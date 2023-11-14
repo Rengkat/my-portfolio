@@ -236,3 +236,6 @@ body::-webkit-scrollbar-thumb {
   visibility: visible;
   opacity: 1;
 }
+.slideImg {
+  height: 100%;
+}

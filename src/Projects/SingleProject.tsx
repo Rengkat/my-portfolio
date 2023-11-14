@@ -10,7 +10,7 @@ interface Props {
 // cons
 const SingleProject = ({ project }: Props) => {
   return (
-    <div className="project-relative h-[50vh] lg:h-[40vh] w-full">
+    <div className="project-relative h-[40vh] lg:h-[40vh] w-full">
       <img
         src={sanityImageUrl(project.mainImage).width(700).url()}
         className="w-full h-full object-cover"

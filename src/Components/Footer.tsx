@@ -6,7 +6,7 @@ import { FaLinkedinIn } from "react-icons/fa";
 const Footer = () => {
   return (
     <div className="bg-[#22252c] py-[5rem]">
-      <div className="w-[40%] mx-auto flex justify-center gap-8 pb-[5rem]">
+      <div className="w-[40%] mx-auto flex justify-center gap-5 pb-[5rem]">
         <a href="https://github.com/Rengkat" className="footer-a">
           <VscGithub className="footer-icon" />
         </a>
@@ -29,7 +29,7 @@ const Footer = () => {
       </div>
       <div className="dash w-[90%] md:w-[80%] mx-auto " />
       <p className="text-center text-[#02cfb4] pt-5">
-        ALEXANDER RENGKAT © 2023. ALL RIGHTS RESERVED.
+        ALEXANDER RENGKAT © {new Date().getFullYear()}. ALL RIGHTS RESERVED.
       </p>
     </div>
   );
