@@ -56,13 +56,7 @@ export interface DetailProjectType {
 }
 export interface Blog {
   keywords: string[];
-  image: {
-    _type: "image";
-    asset: {
-      _ref: string;
-      _type: "reference";
-    };
-  };
+  image: Image;
   shortDescription: string;
   tags: string[];
   dateOfPublication: string;
