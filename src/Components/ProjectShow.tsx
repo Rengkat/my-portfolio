@@ -16,7 +16,7 @@ const ProjectShow = () => {
           </div>
         ) : (
           <div className="p-[0.5rem] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
-            {projects.map((project: Project) => {
+            {projects.slice(0, 6).map((project: Project) => {
               return (
                 <Fragment key={project._id}>
                   <div className="project-relative h-[40vh] w-full">
