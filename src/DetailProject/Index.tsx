@@ -109,7 +109,7 @@ const DetailProject = () => {
                     fontSize: "4rem",
                     left: `${isHover ? 1 : -10}rem`,
                     position: "absolute",
-                    top: "50%",
+                    top: "45%",
                     transition: "left 0.5s",
                     cursor: "pointer",
                   }}
@@ -121,7 +121,7 @@ const DetailProject = () => {
                     fontSize: "3.5rem",
                     right: `${isHover ? 1 : -10}rem`,
                     position: "absolute",
-                    top: "50%",
+                    top: "45%",
                     transition: "right 0.5s",
                     cursor: "pointer",
                   }}
@@ -151,11 +151,11 @@ const DetailProject = () => {
                 transition={{ duration: 0.5 }}
                 viewport={{ once: true }}>
                 <h1 className="font-bold text-xl py-3 text-[#14e8c8]">TECHNOLOGY USED</h1>
-                <div className="flex gap-3">
+                <div>
                   {project?.technologiesUsed.map((tech: string, i: number) => (
-                    <p key={i} className=" capitalize">
-                      {tech}
-                    </p>
+                    <ul key={i} className="list-disc ml-5">
+                      <li className=" capitalize">{tech}</li>
+                    </ul>
                   ))}
                 </div>
               </motion.div>

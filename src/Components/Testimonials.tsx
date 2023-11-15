@@ -17,6 +17,13 @@ const Testimonials = () => {
       clearInterval(timer);
     };
   }, [currentTestimonial, testimonials]);
+
+  // Extract initials
+  function getInitials(name: string) {
+    const names = name.split(" ");
+    return names.map((n) => n[0]).join("");
+  }
+
   return (
     <div id="testimonials" className="scroll-mt-40 overflow-hidden bg-[#22252c]">
       {testminialsLoading ? (
@@ -29,7 +36,7 @@ const Testimonials = () => {
             TESTIMONIALS{" "}
           </h1>
           <div className="w-[90%] md:w-[60%] h-[50vh] mx-auto flex flex-col items-center relative overflow-hidden">
-            {testimonials.map((testimonial, index) => {
+            {testimonials.map((testimonial, index: number) => {
               return (
                 <Fragment key={testimonial._id}>
                   <div
@@ -40,10 +47,16 @@ const Testimonials = () => {
                         ? "translate-x-0"
                         : "translate-x-[150%]"
                     } flex flex-col items-center transition-all duration-[0.5s] ease-linear `}>
-                    <img
-                      src={sanityImageUrl(testimonial.image).width(700).url()}
-                      className="w-[8rem] h-[8rem] rounded-full object-cover"
-                    />
+                    {testimonial?.image ? (
+                      <img
+                        src={sanityImageUrl(testimonial?.image).width(700).url()}
+                        className="w-[8rem] h-[8rem] rounded-full object-cover"
+                      />
+                    ) : (
+                      <div className="w-[8rem] h-[8rem] rounded-full border-2 border-[#02cfb4] grid place-content-center font-bold text-5xl text-[#02cfb4]">
+                        {getInitials(`${testimonial.firstName} ${testimonial.surname}`)}
+                      </div>
+                    )}
 
                     <h2 className="testimonial text-2xl font-bold my-5">
                       {testimonial.firstName} {testimonial.surname}
