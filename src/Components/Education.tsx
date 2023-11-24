@@ -25,7 +25,9 @@ const Education = () => {
                     <SchoolIcon sx={{ fontSize: "2rem", color: "#14e8c8" }} />
                   </div>
                 </TimelineContent>
-                <TimelineConnector sx={{ height: "6rem", width: ".3rem", background: "#14e8c8" }} />
+                <TimelineConnector
+                  sx={{ height: "6rem", width: ".3rem", background: "#14e8c8" }}
+                />
               </TimelineSeparator>
               <TimelineContent className="hidden lg:block"></TimelineContent>
             </TimelineItem>
@@ -35,10 +37,13 @@ const Education = () => {
                   initial={{ x: -100, opacity: 0 }}
                   whileInView={{ x: 0, opacity: 1 }}
                   transition={{ duration: 1, type: "tween" }}
-                  viewport={{ once: true }}>
-                  <h1 className="text-[#14e8c8] font-bold text-xl md:text-3xl">MASTER DEGREE</h1>
+                  viewport={{ once: true }}
+                >
+                  <h1 className="text-[#14e8c8] font-bold text-xl md:text-3xl">
+                    MASTER DEGREE
+                  </h1>
                   <h3 className="text-white">
-                    UNIVERSITY OF NIGERIA, NSUKKA, NIGERIA | 2021 - 2023
+                    UNIVERSITY OF NIGERIA, NSUKKA, NIGERIA | 2020 - 2023
                   </h3>
                 </motion.div>
               </TimelineOppositeContent>
@@ -47,7 +52,11 @@ const Education = () => {
                   <TimelineDot sx={{ background: "#14e8c8" }} />
                 </div>
                 <TimelineConnector
-                  sx={{ height: "12rem", width: ".3rem", background: "#14e8c8" }}
+                  sx={{
+                    height: "12rem",
+                    width: ".3rem",
+                    background: "#14e8c8",
+                  }}
                 />
               </TimelineSeparator>
               <TimelineContent>
@@ -55,17 +64,21 @@ const Education = () => {
                   initial={{ x: 100, opacity: 0 }}
                   whileInView={{ x: 0, y: 0, opacity: 1 }}
                   transition={{ duration: 1, type: "tween" }}
-                  viewport={{ once: true }}>
+                  viewport={{ once: true }}
+                >
                   <div className="lg:hidden mb-3">
-                    <h1 className="text-[#14e8c8] font-bold text-xl md:text-3xl">MASTER DEGREE</h1>
+                    <h1 className="text-[#14e8c8] font-bold text-xl md:text-3xl">
+                      MASTER DEGREE
+                    </h1>
                     <h3 className="text-white">
-                      UNIVERSITY OF NIGERIA, NSUKKA, NIGERIA | 2021 - 2023
+                      UNIVERSITY OF NIGERIA, NSUKKA, NIGERIA | 2020 - 2023
                     </h3>
                   </div>
                   <div className="text-white text-sm md:text-base">
-                    I hold a Master of Science and Education in Chemistry from the University of
-                    Nigeria, Nsukka, showcasing my expertise and dedication to advancing my
-                    knowledge in the field of chemistry.
+                    I hold a Master of Science and Education in Chemistry from
+                    the University of Nigeria, Nsukka, showcasing my expertise
+                    and dedication to advancing my knowledge in the field of
+                    chemistry.
                   </div>
                 </motion.div>
               </TimelineContent>
@@ -77,10 +90,12 @@ const Education = () => {
                   initial={{ x: -100, opacity: 0 }}
                   whileInView={{ x: 0, y: 0, opacity: 1 }}
                   transition={{ duration: 1, type: "tween" }}
-                  viewport={{ once: true }}>
-                  I Successfully completed a comprehensive four-year program at the University of
-                  Jos, earning a Bachelor's degree in Chemistry and Education, honing analytical and
-                  teaching skills.
+                  viewport={{ once: true }}
+                >
+                  I Successfully completed a comprehensive four-year program at
+                  the University of Jos, earning a Bachelor's degree in
+                  Chemistry and Education, honing analytical and teaching
+                  skills.
                 </motion.div>
               </TimelineOppositeContent>
               <TimelineSeparator>
@@ -88,7 +103,11 @@ const Education = () => {
                   <TimelineDot sx={{ background: "#14e8c8" }} />
                 </div>
                 <TimelineConnector
-                  sx={{ height: "12rem", width: ".3rem", background: "#14e8c8" }}
+                  sx={{
+                    height: "12rem",
+                    width: ".3rem",
+                    background: "#14e8c8",
+                  }}
                 />
               </TimelineSeparator>
               <TimelineContent>
@@ -96,15 +115,19 @@ const Education = () => {
                   initial={{ x: 100, opacity: 0 }}
                   whileInView={{ x: 0, y: 0, opacity: 1 }}
                   transition={{ duration: 1, type: "tween" }}
-                  viewport={{ once: true }}>
-                  <h1 className="text-[#14e8c8] font-bold text-xl md:text-3xl">BACHELOR DEGREE</h1>
+                  viewport={{ once: true }}
+                >
+                  <h1 className="text-[#14e8c8] font-bold text-xl md:text-3xl">
+                    BACHELOR DEGREE
+                  </h1>
                   <h3 className="text-white mb-3 lg:mb-0">
-                    UNIVERSITY OF JOS, JOS, NIGERIA | 2021 - 2023
+                    UNIVERSITY OF JOS, JOS, NIGERIA | 2014 - 2018
                   </h3>
                   <Typography className="text-white lg:hidden text-sm md:text-base">
-                    I Successfully completed a comprehensive four-year program at the University of
-                    Jos, earning a Bachelor's degree in Chemistry and Education, honing analytical
-                    and teaching skills.
+                    I Successfully completed a comprehensive four-year program
+                    at the University of Jos, earning a Bachelor's degree in
+                    Chemistry and Education, honing analytical and teaching
+                    skills.
                   </Typography>
                 </motion.div>
               </TimelineContent>
@@ -115,11 +138,14 @@ const Education = () => {
                   initial={{ x: -100, opacity: 0 }}
                   whileInView={{ x: 0, y: 0, opacity: 1 }}
                   transition={{ duration: 1, type: "tween" }}
-                  viewport={{ once: true }}>
+                  viewport={{ once: true }}
+                >
                   <h1 className="text-[#14e8c8] font-bold text-xl md:text-3xl">
                     OTHER CERTIFICATIONS
                   </h1>
-                  <h3 className="text-white">ONLINE COURSES | 2020 - Present</h3>
+                  <h3 className="text-white">
+                    ONLINE COURSES | 2020 - Present
+                  </h3>
                 </motion.div>
               </TimelineOppositeContent>
               <TimelineSeparator>
@@ -127,7 +153,11 @@ const Education = () => {
                   <TimelineDot sx={{ background: "#14e8c8" }} />
                 </div>
                 <TimelineConnector
-                  sx={{ height: "20rem", width: ".3rem", background: "#14e8c8" }}
+                  sx={{
+                    height: "20rem",
+                    width: ".3rem",
+                    background: "#14e8c8",
+                  }}
                 />
               </TimelineSeparator>
               <TimelineContent>
@@ -135,30 +165,43 @@ const Education = () => {
                   initial={{ x: 100, opacity: 0 }}
                   whileInView={{ x: 0, y: 0, opacity: 1 }}
                   transition={{ duration: 1, type: "tween" }}
-                  viewport={{ once: true }}>
+                  viewport={{ once: true }}
+                >
                   <div className="lg:hidden mb-3">
                     <h1 className="text-[#14e8c8] font-bold text-xl md:text-3xl">
                       OTHER CERTIFICATIONS
                     </h1>
-                    <h3 className="text-white">ONLINE COURSES | 2020 - Present</h3>
+                    <h3 className="text-white">
+                      ONLINE COURSES | 2020 - Present
+                    </h3>
                   </div>
                   <div className="text-white text-sm md:text-base">
-                    I have completed a series of comprehensive online courses and certifications to
-                    enhance my skills in web development and programming. These courses include:
+                    I have completed a series of comprehensive online courses
+                    and certifications to enhance my skills in web development
+                    and programming. These courses include:
                   </div>
                   <ul className="text-white list-disc ml-5 text-sm md:text-base">
                     <li>Front-end Fundamentals from Purple.com</li>
-                    <li>Modern JavaScript From The Beginning by Brad Traversy on Udemy.</li>
                     <li>
-                      The Complete JavaScript Course: From Zero to Expert! by Jonson Schmedtmann on
+                      Modern JavaScript From The Beginning by Brad Traversy on
                       Udemy.
                     </li>
                     <li>
-                      WordPress for Beginners - Master WordPress Quickly by Andrew Williams on Udemy
+                      The Complete JavaScript Course: From Zero to Expert! by
+                      Jonson Schmedtmann on Udemy.
+                    </li>
+                    <li>
+                      WordPress for Beginners - Master WordPress Quickly by
+                      Andrew Williams on Udemy
                     </li>
                     <li>React Js. Course by John Smilga on Udemy</li>
-                    <li>Understanding Typescript by Maximilian Schwarzmüller on Udemy.</li>
-                    <li>Next Js & React by Maximilian Schwarzmüller on Udemy</li>
+                    <li>
+                      Understanding Typescript by Maximilian Schwarzmüller on
+                      Udemy.
+                    </li>
+                    <li>
+                      Next Js & React by Maximilian Schwarzmüller on Udemy
+                    </li>
                   </ul>
                 </motion.div>
               </TimelineContent>
