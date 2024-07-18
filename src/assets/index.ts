@@ -28,6 +28,8 @@ import CastForEducationIcon from "@mui/icons-material/CastForEducation";
 import SchoolIcon from "@mui/icons-material/School";
 import LiveTvIcon from "@mui/icons-material/LiveTv";
 import gretch from "./gretch.png";
+import nodeJs from "./nodejs.png";
+import expressJs from "./express-js.png";
 import { SvgIconProps } from "@mui/material";
 
 export {
@@ -53,6 +55,7 @@ export {
   logo2,
   personalImage3,
   gretch,
+  nodeJs,
 };
 export const icons = [
   { icon: html, title: "html" },
@@ -64,9 +67,11 @@ export const icons = [
   { icon: typescript, title: "typescript" },
   { icon: wordpress, title: "wordpress" },
   { icon: nextjs, title: "next.js" },
+  { icon: nodeJs, title: "Node.js" },
+  { icon: expressJs, title: "Express.js" },
+  { icon: redux, title: "redux toolkit" },
   { icon: chemistry, title: "chemistry" },
   { icon: teaching, title: "teaching" },
-  { icon: redux, title: "redux toolkit" },
 ];
 export const someProjects = [
   {
