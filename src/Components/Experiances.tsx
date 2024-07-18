@@ -38,7 +38,7 @@ const Experiences = () => {
                   <h1 className="text-[#14e8c8] font-bold text-xl md:text-3xl">
                     FRONT-END DEVELOPER
                   </h1>
-                  <h3 className="text-white">YOSRIS AFRICA, LAGOS, NIGERIA | 2021 - PRESENT</h3>
+                  <h3 className="text-white">NOSA, JOS, NIGERIA | 2023 - PRESENT (CONTRACT)</h3>
                 </motion.div>
               </TimelineOppositeContent>
               <TimelineSeparator>
@@ -46,7 +46,7 @@ const Experiences = () => {
                   <TimelineDot sx={{ background: "#14e8c8" }} />
                 </div>
                 <TimelineConnector
-                  sx={{ height: "18rem", width: ".3rem", background: "#14e8c8" }}
+                  sx={{ height: "15rem", width: ".3rem", background: "#14e8c8" }}
                 />
               </TimelineSeparator>
               <TimelineContent>
@@ -59,29 +59,19 @@ const Experiences = () => {
                     <h1 className="text-[#14e8c8] font-bold text-xl md:text-3xl">
                       FRONT-END DEVELOPER
                     </h1>
-                    <h3 className="text-white">YOSRIS AFRICA, LAGOS, NIGERIA | 2021 - PRESENT</h3>
+                    <h3 className="text-white">NOSA, JOS, NIGERIA | 2023 - PRESENT (CONTRACT)</h3>
                   </div>
                   <div className="text-white text-sm md:text-base">
                     <ul className=" list-disc ml-2">
+                      <li>Designed, Developed and maintain the organization’s front end web App</li>
+                      <li>Integrate front end app with APIs with the backend</li>
                       <li>
-                        Created super admin dashboard using {""}
-                        <span className="tech-used">
-                          React, Redux Toolkit, styled components, Material UI, Redux Persist, and
-                          Recharts
-                        </span>
+                        Collaborated with a 3-member cross-functional team using GitHub, Google
+                        Meet, and Slack
                       </li>
                       <li>
-                        Worked collaboratively in a 6-member cross-functional team, utilizing {""}
-                        <span className="tech-used">GitHub, Google Meet, and Slack </span>
-                      </li>
-                      <li>
-                        Evaluated 13+ UI/UX <span className="tech-used">Figma</span> designs for
-                        technical feasibility and improved implementation
-                      </li>
-                      <li>
-                        Expanded dashboard functionality by integrating 9+ APIs with {""}
-                        <span className="tech-used">Axios and createAsyncThunk</span> for data
-                        fetching
+                        <span className="tech-used">Tech Stack –</span> React, Next, Styled
+                        Component, Redux toolkit, Django, PostgresSQL
                       </li>
                     </ul>
                   </div>
@@ -97,22 +87,15 @@ const Experiences = () => {
                   transition={{ duration: 1, type: "tween" }}
                   viewport={{ once: true }}>
                   <ul className=" list-disc text-justify">
+                    <li>Developed the company's super admin dashboard.</li>
+                    <li>Collaborated with a 6-member team using GitHub, Google Meet, and Slack.</li>
                     <li>
-                      Uploaded and published 20+ daily news stories and feature articles on
-                      <span className="tech-used"> WordPress</span> , resulting in increased page
-                      views and advertising revenue.
+                      Evaluated 7 UI/UX designs for technical feasibility, enhancing implementation.
                     </li>
+                    <li>Enhanced dashboard features by integrating APIs with the back end.</li>
                     <li>
-                      Developed and maintained front-end components with{" "}
-                      <span className="tech-used">WordPress template</span>
-                      hierarchy, custom post types, and advanced custom fields, using{" "}
-                      <span className="tech-used">Elementor Page Builder</span> for a 35%
-                      improvement in website functionality and user satisfaction.
-                    </li>
-                    <li>
-                      Stayed updated on the latest <span className="tech-used">WordPress</span>{" "}
-                      developments, integrating new versions and security updates to decrease
-                      vulnerabilities and enhance website performance.
+                      <span className="tech-used">Tech Stack –</span> React, Styled Component, Redux
+                      toolkit, Axios, Node.js, Express, MongoDB.
                     </li>
                   </ul>
                 </motion.div>
@@ -122,7 +105,7 @@ const Experiences = () => {
                   <TimelineDot sx={{ background: "#14e8c8" }} />
                 </div>
                 <TimelineConnector
-                  sx={{ height: "18rem", width: ".3rem", background: "#14e8c8" }}
+                  sx={{ height: "15rem", width: ".3rem", background: "#14e8c8" }}
                 />
               </TimelineSeparator>
               <TimelineContent>
@@ -133,31 +116,26 @@ const Experiences = () => {
                   viewport={{ once: true }}>
                   <div>
                     <h1 className="text-[#14e8c8] font-bold text-xl md:text-3xl">
-                      WORDPRESS DESIGNER/ BLOGGER
+                      FRONTEND DEVELOPER
                     </h1>
                     <h3 className="text-white mb-3 lg:mb-0">
-                      HEADLINE NEWS, LAGOS, NIGERIA | 2021 - 2023
+                      YORIS AFRICA ENTERPRISE, LAGOS | 2021 - 2023
                     </h3>
                   </div>
-
                   <Typography className="text-white lg:hidden text-sm md:text-base">
                     <ul className=" list-disc text-justify">
+                      <li>Developed the company's super admin dashboard.</li>
                       <li>
-                        Uploaded and published 20+ daily news stories and feature articles on
-                        <span className="tech-used"> WordPress</span> , resulting in increased page
-                        views and advertising revenue.
+                        Collaborated with a 6-member team using GitHub, Google Meet, and Slack.
                       </li>
                       <li>
-                        Developed and maintained front-end components with{" "}
-                        <span className="tech-used">WordPress template</span>
-                        hierarchy, custom post types, and advanced custom fields, using{" "}
-                        <span className="tech-used">Elementor Page Builder</span> for a 35%
-                        improvement in website functionality and user satisfaction.
+                        Evaluated 7 UI/UX designs for technical feasibility, enhancing
+                        implementation.
                       </li>
+                      <li>Enhanced dashboard features by integrating APIs with the back end.</li>
                       <li>
-                        Stayed updated on the latest <span className="tech-used">WordPress</span>{" "}
-                        developments, integrating new versions and security updates to decrease
-                        vulnerabilities and enhance website performance.
+                        <span className="tech-used">Tech Stack –</span> React, Styled Component,
+                        Redux toolkit, Axios, Node.js, Express, MongoDB.
                       </li>
                     </ul>
                   </Typography>
@@ -172,9 +150,9 @@ const Experiences = () => {
                   transition={{ duration: 1, type: "tween" }}
                   viewport={{ once: true }}>
                   <h1 className="text-[#14e8c8] font-bold text-xl md:text-3xl">
-                    YOUTUBE CONTENT CREATOR
+                    FRONTEND DEVELOPER
                   </h1>
-                  <h3 className="text-white">THE CATALYST | 2020 - Present</h3>
+                  <h3 className="text-white">HEADLINE NEW, LAGOS | 2020 - 2021</h3>
                 </motion.div>
               </TimelineOppositeContent>
               <TimelineSeparator>
@@ -194,29 +172,28 @@ const Experiences = () => {
                   className="text-white text-sm md:text-base">
                   <div className="lg:hidden mb-3 ">
                     <h1 className="text-[#14e8c8] font-bold text-xl md:text-3xl">
-                      YOUTUBE CONTENT CREATOR
+                      FRONTEND DEVELOPER
                     </h1>
-                    <h3 className="text-white">THE CATALYST | 2020 - Present</h3>
+                    <h3 className="text-white">HEADLINE NEW, LAGOS | 2020 - 2021</h3>
                   </div>
                   <ul className=" list-disc ml-5">
                     <li>
-                      Produced and published educational videos on chemistry and mathematics topics,
-                      garnering subscribers.
+                      Developed, update and maintained front-end components using Sanity Content
+                      lake
                     </li>
                     <li>
-                      Employed effective instructional strategies to break down complex mathematical
-                      and chemistry concepts in video content.
+                      Uploaded and published 20+ daily news stories and feature articles to company
+                      web app.
                     </li>
                     <li>
-                      Created video solutions for West African Examination Council, National
-                      Examination Council, and Joint Admission Matriculation Board Past Questions
-                      using Digital notepad and Microsoft whiteboard.
+                      <span className="tech-used"> Tech Stack –</span> React, CSS, Snity.io, Redux
+                      toolkit, Node, Express, MongoDB, Axios
                     </li>
                   </ul>
                 </motion.div>
               </TimelineContent>
             </TimelineItem>
-            <TimelineItem position="right" sx={{}}>
+            {/* <TimelineItem position="right" sx={{}}>
               <TimelineOppositeContent className="hidden lg:block">
                 <motion.div
                   className="text-white text-sm md:text-base"
@@ -280,7 +257,7 @@ const Experiences = () => {
                   </ul>
                 </motion.div>
               </TimelineContent>
-            </TimelineItem>
+            </TimelineItem> */}
             <TimelineItem className="-ml-[1rem] lg:-ml-[0rem]">
               <TimelineSeparator>
                 <TimelineContent>
