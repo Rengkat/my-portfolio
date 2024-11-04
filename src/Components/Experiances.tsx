@@ -36,9 +36,9 @@ const Experiences = () => {
                   transition={{ duration: 1, type: "tween" }}
                   viewport={{ once: true }}>
                   <h1 className="text-[#14e8c8] font-bold text-xl md:text-3xl">
-                    FRONT-END DEVELOPER
+                    FULL-STACK DEVELOPER
                   </h1>
-                  <h3 className="text-white">NOSA, JOS, NIGERIA | 2023 - PRESENT (CONTRACT)</h3>
+                  <h3 className="text-white">NOSA, JOS, NIGERIA | 2023 - 2024 (CONTRACT)</h3>
                 </motion.div>
               </TimelineOppositeContent>
               <TimelineSeparator>
@@ -57,13 +57,16 @@ const Experiences = () => {
                   viewport={{ once: true }}>
                   <div className="lg:hidden mb-3">
                     <h1 className="text-[#14e8c8] font-bold text-xl md:text-3xl">
-                      FRONT-END DEVELOPER
+                      Full-Stack DEVELOPER
                     </h1>
-                    <h3 className="text-white">NOSA, JOS, NIGERIA | 2023 - PRESENT (CONTRACT)</h3>
+                    <h3 className="text-white">NOSA, JOS, NIGERIA | 2023 - 2024 (CONTRACT)</h3>
                   </div>
                   <div className="text-white text-sm md:text-base">
                     <ul className=" list-disc ml-2">
-                      <li>Designed, Developed and maintain the organization’s front end web App</li>
+                      <li>
+                        Designed, Developed and maintain the organization’s front and backend end
+                        web App
+                      </li>
                       <li>Integrate front end app with APIs with the backend</li>
                       <li>
                         Collaborated with a 3-member cross-functional team using GitHub, Google
@@ -71,7 +74,7 @@ const Experiences = () => {
                       </li>
                       <li>
                         <span className="tech-used">Tech Stack –</span> React, Next, Styled
-                        Component, Redux toolkit, Django, PostgresSQL
+                        Component, Redux toolkit, Node.js, Express.js and MongoDB.
                       </li>
                     </ul>
                   </div>

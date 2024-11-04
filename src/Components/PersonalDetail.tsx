@@ -47,11 +47,12 @@ const AboutMe = () => {
           viewport={{ once: true, amount: 0.3 }}>
           <h1 className="abtm font-bold text-4xl md:text-5xl my-5">ABOUT ME</h1>
           <p className="text-white text-base md:text-xl">
-            Hello! I'm Alexander Rengkat, a Front-End Developer based in Jos, Plateau State,
+            Hello! I'm Alexander Rengkat, a Full-Stack Developer based in Jos, Plateau State,
             Nigeria, with over 4 years of experience. I specialize in creating dynamic web projects
-            using modern front-end technologies. My expertise includes advanced HTML5, CSS3,
-            JavaScript, Tailwind CSS, React, and Next.js. Beyond my technical skills, I bring a
-            strong educational background in Chemistry and Education to my work.
+            using modern technologies. My expertise includes advanced HTML5, CSS3, JavaScript,
+            Tailwind CSS, React, Next.js, Express.js, Node.js, MongoDB and Go (Go lang). Beyond my
+            technical skills, I bring a strong educational background in Chemistry and Education to
+            my work.
           </p>
           <section className="mt-[2rem]">
             <aside className="detail-info">

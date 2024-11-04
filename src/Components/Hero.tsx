@@ -21,7 +21,7 @@ const Hero = () => {
             <h1 className="font-bold text-[2rem] md:text-[4rem] text-white -mt-5">
               I'm Alexander Rengkat
             </h1>
-            <p className="text-white text-2xl lg:text-3xl">Front-End Developer</p>
+            <p className="text-white text-2xl lg:text-3xl">Full-Stack Developer</p>
           </motion.div>
         </div>
       </div>
