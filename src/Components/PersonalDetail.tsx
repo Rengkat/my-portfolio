@@ -47,12 +47,12 @@ const AboutMe = () => {
           viewport={{ once: true, amount: 0.3 }}>
           <h1 className="abtm font-bold text-4xl md:text-5xl my-5">ABOUT ME</h1>
           <p className="text-white text-base md:text-xl">
-            Hello! I'm Alexander Rengkat, a Full-Stack Developer based in Jos, Plateau State,
-            Nigeria, with over 4 years of experience. I specialize in creating dynamic web projects
-            using modern technologies. My expertise includes advanced HTML5, CSS3, JavaScript,
-            Tailwind CSS, React, Next.js, Express.js, Node.js, MongoDB and Go (Go lang). Beyond my
-            technical skills, I bring a strong educational background in Chemistry and Education to
-            my work.
+            Results-driven Full-Stack Developer with 4+ years of experience building dynamic web
+            applications using modern technologies. Adept at both frontend and backend development,
+            with expertise in React, Next.js, Node.js, Express, MongoDB, and Go (Golang). Combines
+            technical proficiency with a strong educational background in Chemistry and a passion
+            for mentoring aspiring developers. Proven track record of delivering scalable solutions,
+            optimizing performance, and collaborating in cross-functional teams.
           </p>
           <section className="mt-[2rem]">
             <aside className="detail-info">
@@ -71,7 +71,7 @@ const AboutMe = () => {
               <div className="label-detail">
                 <LocationOnIcon /> <label htmlFor="address">ADDRESS:</label>
               </div>
-              <h2 className="info-text">Jos, Plateau State, Nigeria</h2>
+              <h2 className="info-text">Narayi, Kaduna State, Nigeria</h2>
             </aside>
             <aside className="detail-info">
               <div className="label-detail">
