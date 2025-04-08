@@ -34,7 +34,7 @@ const AboutMe = () => {
             initial={{ y: 20, opacity: 0 }}
             whileInView={{ x: 0, y: 0, opacity: 1 }}
             transition={{ duration: 0.5, type: "tween" }}>
-            <a href="../../lib/Resume.pdf" download={true}>
+            <a href="../../lib/Alexander Rengkat - Fullstack Developer.pdf" download={true}>
               Download Resume
             </a>
           </motion.button>

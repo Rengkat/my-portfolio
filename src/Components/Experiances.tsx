@@ -36,6 +36,71 @@ const Experiences = () => {
                   transition={{ duration: 1, type: "tween" }}
                   viewport={{ once: true }}>
                   <h1 className="text-[#14e8c8] font-bold text-xl md:text-3xl">
+                    WEB DEVELOPMENT INSTRUCTOR
+                  </h1>
+                  <h3 className="text-white">
+                    Orphanage Care & Support Foundation and Help Vulnerable Children Aid Foundation,
+                    Kaduna in Collaboration with World Bank and Federal Government of Nigeria| 2024
+                    - 2025 (CONTRACT)
+                  </h3>
+                </motion.div>
+              </TimelineOppositeContent>
+              <TimelineSeparator>
+                <div className="w-[2rem] h-[2rem] rounded-full border-2 border-[#14e8c8] grid place-content-center">
+                  <TimelineDot sx={{ background: "#14e8c8" }} />
+                </div>
+                <TimelineConnector
+                  sx={{ height: "15rem", width: ".3rem", background: "#14e8c8" }}
+                />
+              </TimelineSeparator>
+              <TimelineContent>
+                <motion.div
+                  initial={{ x: 100, opacity: 0 }}
+                  whileInView={{ x: 0, y: 0, opacity: 1 }}
+                  transition={{ duration: 1, type: "tween" }}
+                  viewport={{ once: true }}>
+                  <div className="lg:hidden mb-3">
+                    <h1 className="text-[#14e8c8] font-bold text-xl md:text-3xl">
+                      Web Development Instructor
+                    </h1>
+                    <h3 className="text-white">
+                      Orphanage Care & Support Foundation and Help Vulnerable Children Aid
+                      Foundation, Kaduna in Collaboration with World Bank and Federal Government of
+                      Nigeria| 2024 - 2025 (CONTRACT)
+                    </h3>
+                  </div>
+                  <div className="text-white text-sm md:text-base">
+                    <ul className=" list-disc ml-2">
+                      <li>
+                        Delivered web development courses (HTML, CSS, JavaScript and React) tailored
+                        to mainstream and hearing-impaired students
+                      </li>
+                      <li>
+                        Implemented inclusive teaching strategies in both virtual and physical
+                        classrooms.
+                      </li>
+                      <li>
+                        Assessed students’ progress via quizzes, projects, and personalized
+                        feedback.
+                      </li>
+                      <li>Mentored students on career paths and industry best practices.</li>
+                      <li>
+                        <span className="tech-used">Tech Stack –</span> React, Next, Styled
+                        Component, Redux toolkit, Node.js, Express.js and MongoDB.
+                      </li>
+                    </ul>
+                  </div>
+                </motion.div>
+              </TimelineContent>
+            </TimelineItem>
+            <TimelineItem position="right" sx={{}}>
+              <TimelineOppositeContent className=" hidden lg:block">
+                <motion.div
+                  initial={{ x: -100, opacity: 0 }}
+                  whileInView={{ x: 0, y: 0, opacity: 1 }}
+                  transition={{ duration: 1, type: "tween" }}
+                  viewport={{ once: true }}>
+                  <h1 className="text-[#14e8c8] font-bold text-xl md:text-3xl">
                     FULL-STACK DEVELOPER
                   </h1>
                   <h3 className="text-white">NOSA, JOS, NIGERIA | 2023 - 2024 (CONTRACT)</h3>
