@@ -35,8 +35,8 @@ const AboutMe = () => {
             whileInView={{ x: 0, y: 0, opacity: 1 }}
             transition={{ duration: 0.5, type: "tween" }}>
             <a
-              href="https://drive.google.com/file/d/13R9z6jrnRvEg7h2ja27ZRsxRtBNkhWRf/view?usp=sharing"
-              download={true}>
+              href="https://drive.google.com/uc?export=download&id=13R9z6jrnRvEg7h2ja27ZRsxRtBNkhWRf"
+              download="Alexander_Rengkat_Resume.pdf">
               Download Resume
             </a>
           </motion.button>
