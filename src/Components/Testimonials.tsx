@@ -1,85 +1,94 @@
-// import { testimonials } from "../assets";
-import { useEffect, useState, useContext, Fragment } from "react";
+import { useEffect, useState, useContext } from "react";
 import { AppContext } from "../Context/AppContext";
 import { sanityImageUrl } from "../../lib/sanity";
+import { motion } from "framer-motion";
 
 const Testimonials = () => {
   const { testimonials, testminialsLoading } = useContext(AppContext);
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
+
   useEffect(() => {
-    if (currentTestimonial >= testimonials.length) {
+    if (testimonials.length > 0 && currentTestimonial >= testimonials.length) {
       setCurrentTestimonial(0);
     }
     const timer = setInterval(() => {
-      setCurrentTestimonial((prev) => prev + 1);
-    }, 10000);
-    return () => {
-      clearInterval(timer);
-    };
+      setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
+    }, 8000);
+    return () => clearInterval(timer);
   }, [currentTestimonial, testimonials]);
 
-  // Extract initials
   function getInitials(name: string) {
     const names = name.split(" ");
     return names.map((n) => n[0]).join("");
   }
 
   return (
-    <div id="testimonials" className="scroll-mt-40 overflow-hidden bg-[#22252c]">
-      {testminialsLoading ? (
-        <div className="w-full h-[40vh] flex items-center justify-center">
-          <div className="text-white text-2xl font-bold">Loading...</div>
-        </div>
-      ) : (
-        <div className="pt-[4rem] md:pt-[6rem] pb-[6rem] md:pb-[10rem] ">
-          <h1 className="edu font-bold text-3xl md:text-5xl text-center py-[5rem]">
-            TESTIMONIALS{" "}
-          </h1>
-          <div className="w-[90%] md:w-[60%] h-[50vh] mx-auto flex flex-col items-center relative overflow-hidden">
-            {testimonials.map((testimonial, index: number) => {
-              return (
-                <Fragment key={testimonial._id}>
-                  <div
-                    className={`absolute ${
-                      currentTestimonial > index
-                        ? "-translate-x-[150%]"
-                        : currentTestimonial === index
-                        ? "translate-x-0"
-                        : "translate-x-[150%]"
-                    } flex flex-col items-center transition-all duration-[0.5s] ease-linear `}>
-                    {testimonial?.image ? (
-                      <img
-                        src={sanityImageUrl(testimonial?.image).width(700).url()}
-                        className="w-[8rem] h-[8rem] rounded-full object-cover"
-                      />
-                    ) : (
-                      <div className="w-[8rem] h-[8rem] rounded-full border-2 border-[#02cfb4] grid place-content-center font-bold text-5xl text-[#02cfb4]">
-                        {getInitials(`${testimonial.firstName} ${testimonial.surname}`)}
-                      </div>
-                    )}
+    <section id="testimonials" className="bg-[#22252c] py-20 scroll-mt-20 overflow-hidden">
+      <div className="container mx-auto px-4 max-w-6xl">
+        <h1 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-[#17d497] via-[#12deb3] to-[#08f7f7]">
+          TESTIMONIALS
+        </h1>
 
-                    <h2 className="testimonial text-2xl font-bold my-5">
-                      {testimonial.firstName} {testimonial.surname}
-                    </h2>
-
-                    <p className="testimonisl-text text-white text-center">
-                      {testimonial.testimony}
-                    </p>
-                  </div>
-                </Fragment>
-              );
-            })}
+        {testminialsLoading ? (
+          <div className="flex justify-center items-center h-64">
+            <div className="animate-pulse text-2xl font-bold text-white">
+              Loading testimonials...
+            </div>
           </div>
-        </div>
-      )}
-    </div>
+        ) : (
+          <div className="relative h-96">
+            {testimonials.map((testimonial, index) => (
+              <motion.div
+                key={testimonial._id}
+                className={`absolute inset-0 flex flex-col items-center transition-all duration-500 ease-in-out ${
+                  currentTestimonial === index
+                    ? "opacity-100 translate-x-0"
+                    : index < currentTestimonial
+                    ? "-translate-x-full opacity-0"
+                    : "translate-x-full opacity-0"
+                }`}>
+                <div className="relative">
+                  {testimonial?.image ? (
+                    <img
+                      src={sanityImageUrl(testimonial.image).width(700).url()}
+                      className="w-32 h-32 rounded-full object-cover border-4 border-[#14e8c8] shadow-lg"
+                      alt={`${testimonial.firstName} ${testimonial.surname}`}
+                    />
+                  ) : (
+                    <div className="w-32 h-32 rounded-full border-4 border-[#14e8c8] flex items-center justify-center bg-[#1a1d24] shadow-lg">
+                      <span className="text-4xl font-bold text-[#14e8c8]">
+                        {getInitials(`${testimonial.firstName} ${testimonial.surname}`)}
+                      </span>
+                    </div>
+                  )}
+                </div>
+
+                <h3 className="text-2xl font-bold text-white mt-6 mb-2">
+                  {testimonial.firstName} {testimonial.surname}
+                </h3>
+
+                <div className="max-w-2xl mx-auto text-center text-white text-lg leading-relaxed px-4">
+                  "{testimonial.testimony}"
+                </div>
+              </motion.div>
+            ))}
+
+            <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 flex gap-2">
+              {testimonials.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentTestimonial(index)}
+                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                    currentTestimonial === index ? "bg-[#14e8c8] w-6" : "bg-gray-500"
+                  }`}
+                />
+              ))}
+            </div>
+          </div>
+        )}
+      </div>
+    </section>
   );
 };
 
 export default Testimonials;
-
-// {
-//   testimonials.map((testimonial, index) => {
-//     return <Fragment></Fragment>;
-//   });
-// }

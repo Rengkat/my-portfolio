@@ -1,127 +1,147 @@
-import { Interest, interests, personalImage3 } from "../assets";
-import { Fragment } from "react";
-import DriveFileRenameOutlineIcon from "@mui/icons-material/DriveFileRenameOutline";
-import FlagIcon from "@mui/icons-material/Flag";
-import LocationOnIcon from "@mui/icons-material/LocationOn";
-import PhoneEnabledIcon from "@mui/icons-material/PhoneEnabled";
-import EmailIcon from "@mui/icons-material/Email";
-import FolderZipIcon from "@mui/icons-material/FolderZip";
+import { interests, personalImage3 } from "../assets";
 import { motion } from "framer-motion";
-// import { useInView } from "react-intersection-observer";
+import {
+  DriveFileRenameOutline as NameIcon,
+  Flag as FlagIcon,
+  LocationOn as LocationIcon,
+  Phone as PhoneIcon,
+  Email as EmailIcon,
+  FolderZip as ZipIcon,
+} from "@mui/icons-material";
+
 const AboutMe = () => {
   const interestAnimate = {
-    initial: (index: number) => ({ y: index % 2 == 0 ? -80 : 100, opacity: 0 }),
-    animate: { y: 0, opacity: 1, transition: { duration: 1, type: "tween", amount: 0.5 } },
+    initial: (index: number) => ({
+      y: index % 2 === 0 ? -50 : 50,
+      opacity: 0,
+      scale: 0.9,
+    }),
+    animate: {
+      y: 0,
+      opacity: 1,
+      scale: 1,
+      transition: {
+        duration: 0.8,
+        type: "spring",
+        stiffness: 100,
+        damping: 10,
+      },
+    },
   };
+
+  const personalInfo = [
+    { icon: <NameIcon className="text-teal-400" />, label: "NAME:", value: "Alexander Rengkat" },
+    { icon: <FlagIcon className="text-teal-400" />, label: "NATIONALITY:", value: "Nigeria" },
+    {
+      icon: <LocationIcon className="text-teal-400" />,
+      label: "ADDRESS:",
+      value: "Narayi, Kaduna State, Nigeria",
+    },
+    { icon: <ZipIcon className="text-teal-400" />, label: "ZIP/ POSTAL CODE:", value: "930272" },
+    {
+      icon: <PhoneIcon className="text-teal-400" />,
+      label: "PHONE:",
+      value: "+234 806 758 1175, +234 815 326 3319",
+    },
+    {
+      icon: <EmailIcon className="text-teal-400" />,
+      label: "EMAIL:",
+      value: "alexrengkat@gmail.com",
+    },
+  ];
+
   return (
-    <div className="bg-[#22252c] p-4 scroll-mt-40" id="about">
-      <div className="md:w-[80%] mx-auto flex flex-col md:flex-row">
-        <motion.aside className="my-[2rem] md:w-[50%]">
+    <section id="about" className="bg-gray-900 py-20 scroll-mt-20">
+      <div className="container mx-auto px-6 max-w-6xl">
+        {/* Main Content */}
+        <div className="flex flex-col lg:flex-row gap-12 items-start">
+          {/* Image Section */}
           <motion.div
-            className="border-[.3rem] border-[#14e8c8] w-full md:w-[90%] md:h-full "
-            initial={{ x: -100, y: 20, opacity: 0 }}
-            whileInView={{ x: 0, y: 0, opacity: 1 }}
-            transition={{ duration: 1, type: "tween" }}
-            viewport={{ once: true, amount: 0.3 }}>
-            <img
-              src={personalImage3}
-              alt="personal Image"
-              className="w-[100%] md:h-full  object-cover"
-            />
-          </motion.div>
-          <motion.button
-            className="resume text-white text-xl font-bold py-3 px-6 my-5 shadow-lg hover:shadow-2xl hover:scale-[1.12] focus:scale-[1.04] transition duration-150"
-            initial={{ y: 20, opacity: 0 }}
-            whileInView={{ x: 0, y: 0, opacity: 1 }}
-            transition={{ duration: 0.5, type: "tween" }}>
-            <a
+            className="w-full lg:w-1/2"
+            initial={{ x: -50, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}>
+            <div className="relative group">
+              <div className="absolute -inset-2 bg-gradient-to-r from-teal-400 to-cyan-500 rounded-xl blur opacity-75 group-hover:opacity-100 transition duration-300"></div>
+              <div className="relative border-4 border-teal-400 rounded-xl overflow-hidden">
+                <img
+                  src={personalImage3}
+                  alt="Alexander Rengkat"
+                  className="w-full h-auto object-cover transform group-hover:scale-105 transition duration-500"
+                />
+              </div>
+            </div>
+
+            <motion.a
               href="https://drive.google.com/uc?export=download&id=13R9z6jrnRvEg7h2ja27ZRsxRtBNkhWRf"
-              download="Alexander_Rengkat_Resume.pdf">
+              download="Alexander_Rengkat_Resume.pdf"
+              className="inline-block mt-8 px-8 py-3 bg-gradient-to-r from-teal-400 to-cyan-500 text-white font-bold rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}>
               Download Resume
-            </a>
-          </motion.button>
-        </motion.aside>
-        <motion.aside
-          className="md:w-1/2"
-          initial={{ x: 200, opacity: 0 }}
-          whileInView={{ x: 0, y: 0, opacity: 1 }}
-          transition={{ duration: 1, type: "tween" }}
-          viewport={{ once: true, amount: 0.3 }}>
-          <h1 className="abtm font-bold text-4xl md:text-5xl my-5">ABOUT ME</h1>
-          <p className="text-white text-base md:text-xl">
-            Results-driven Full-Stack Developer with 4+ years of experience building dynamic web
-            applications using modern technologies. Adept at both frontend and backend development,
-            with expertise in React, Next.js, Node.js, Express, MongoDB, and Go (Golang). Combines
-            technical proficiency with a strong educational background in Chemistry and a passion
-            for mentoring aspiring developers. Proven track record of delivering scalable solutions,
-            optimizing performance, and collaborating in cross-functional teams.
-          </p>
-          <section className="mt-[2rem]">
-            <aside className="detail-info">
-              <div className="label-detail">
-                <DriveFileRenameOutlineIcon /> <label htmlFor="name">NAME:</label>
-              </div>
-              <h2 className="info-text">Alexander Rengkat</h2>
-            </aside>
-            <aside className="detail-info">
-              <div className="label-detail">
-                <FlagIcon /> <label htmlFor="nationality">NATIONALITY:</label>
-              </div>
-              <h2 className="info-text">Nigeria</h2>
-            </aside>
-            <aside className="detail-info">
-              <div className="label-detail">
-                <LocationOnIcon /> <label htmlFor="address">ADDRESS:</label>
-              </div>
-              <h2 className="info-text">Narayi, Kaduna State, Nigeria</h2>
-            </aside>
-            <aside className="detail-info">
-              <div className="label-detail">
-                <FolderZipIcon /> <label htmlFor="address">ZIP/ POSTAL CODE:</label>
-              </div>
-              <h2 className="info-text">930272</h2>
-            </aside>
-            <aside className="detail-info">
-              <div className="label-detail">
-                <PhoneEnabledIcon /> <label htmlFor="address">PHONE:</label>
-              </div>
-              <h2 className="info-text">+234 806 758 1175, +234 815 326 3319</h2>
-            </aside>
-            <aside className="detail-info">
-              <div className="label-detail">
-                <EmailIcon /> <label htmlFor="address">EMAIL:</label>
-              </div>
-              <h2 className="info-text">alexrengkat@gmail.com</h2>
-            </aside>
-          </section>
-        </motion.aside>
-      </div>
-      <div className="my-[6rem]">
-        <h1 className="int font-bold text-4xl md:text-5xl mt-[8rem] mb-[4rem] md:mt-[10rem] md:mb-[10rem] text-center">
-          MY INTERESTS
-        </h1>
-        <div className="w-[90%] mx-auto grid grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-5">
-          {interests.map((interest: Interest, index) => {
-            return (
-              <Fragment key={interest?.text}>
-                <motion.aside
-                  className="circle-cont"
-                  variants={interestAnimate}
-                  initial="initial"
-                  whileInView="animate"
-                  custom={index}
-                  viewport={{ once: true }}>
-                  <div className="circle">
-                    <interest.icon sx={{ fontSize: "2rem" }} />
+            </motion.a>
+          </motion.div>
+
+          {/* Text Content */}
+          <motion.div
+            className="w-full lg:w-1/2"
+            initial={{ x: 50, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-teal-400 to-cyan-500">
+              ABOUT ME
+            </h1>
+
+            <p className="text-gray-300 text-lg mb-8 leading-relaxed">
+              Results-driven Full-Stack Developer with 4+ years of experience building dynamic web
+              applications using modern technologies. Adept at both frontend and backend
+              development, with expertise in React, Next.js, Node.js, Express, MongoDB, and Go
+              (Golang). Combines technical proficiency with a strong educational background in
+              Chemistry and a passion for mentoring aspiring developers.
+            </p>
+
+            <div className="space-y-4">
+              {personalInfo.map((info, index) => (
+                <div key={index} className="flex items-start gap-4">
+                  <div className="flex-shrink-0 pt-1">{info.icon}</div>
+                  <div>
+                    <div className="text-teal-400 font-semibold">{info.label}</div>
+                    <div className="text-gray-300">{info.value}</div>
                   </div>
-                  <h1 className="interest-title">{interest.text}</h1>
-                </motion.aside>
-              </Fragment>
-            );
-          })}
+                </div>
+              ))}
+            </div>
+          </motion.div>
+        </div>
+
+        {/* Interests Section */}
+        <div className="mt-24">
+          <h1 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-clip-text text-transparent bg-gradient-to-r from-teal-400 to-cyan-500">
+            MY INTERESTS
+          </h1>
+
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 px-4">
+            {interests.map((interest, index) => (
+              <motion.div
+                key={interest.text}
+                className="flex flex-col items-center"
+                variants={interestAnimate}
+                initial="initial"
+                whileInView="animate"
+                custom={index}
+                viewport={{ once: true }}>
+                <div className="w-20 h-20 rounded-full border-2 border-teal-400 flex items-center justify-center mb-4 transition-all duration-300 hover:bg-gradient-to-r from-teal-400 to-cyan-500 hover:border-transparent group">
+                  <interest.icon className="text-3xl text-teal-400 group-hover:text-white" />
+                </div>
+                <h3 className="text-white text-center font-medium text-lg">{interest.text}</h3>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

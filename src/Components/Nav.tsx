@@ -16,7 +16,7 @@ const Nav = () => {
     <>
       <div
         className={`${path === "/" ? "nav" : "bg-[#313741] py-[1.8rem]"} fixed top-0 w-full z-[5]`}>
-        <div className="w-[90%] md:w-[75%] mx-auto flex justify-between py-[1.5rem]">
+        <div className="w-[90%] md:w-[75%] mx-auto flex justify-between py-[1rem]">
           <ul className="flex list-none gap-5">
             <li>
               <a target="_blank" href="https://github.com/Rengkat" className=" w-5 h-5">

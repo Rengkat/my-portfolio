@@ -13,7 +13,7 @@ const SharedRoute = () => {
         // onClick={openMainNav}
         className={`${
           isMainMenuOpen ? " translate-x-full" : " translate-x-0"
-        } w-full bg-[#000000cf]  fixed z-10 backdrop-blur-[1px] inset-0 flex justify-end transition-all duration-1000`}>
+        } w-full bg-[#000000cf]  fixed z-50 backdrop-blur-[1px] inset-0 flex justify-end transition-all duration-1000`}>
         <SideBar />
       </div>
       <main className="relative">

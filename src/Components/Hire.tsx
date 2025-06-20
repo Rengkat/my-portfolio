@@ -3,26 +3,38 @@ import { motion } from "framer-motion";
 
 const HireMe = () => {
   return (
-    <div className="bg-[#02cfb4] text-[#22252c] py-[5rem]">
-      <motion.div
-        className=" flex flex-col md:flex-row justify-center items-center w-[90%] md:w-[80%] mx-auto"
-        initial={{ y: 100, opacity: 0 }}
-        whileInView={{ x: 0, y: 0, opacity: 1 }}
-        transition={{ duration: 1, type: "tween" }}
-        viewport={{ once: true }}>
-        <div className="flex w-full md:w-[70%]">
-          <BsSendFill className="text-[4rem] hidden md:block -mr-12 md:-mr-0 md:-mt-5" />
-          <div className="w-[90%] text-center">
-            <h1 className="font-bold text-2xl md:text-4xl">HIRE ME FOR YOUR AWESOME PROJECT</h1>
-            <p>I am available for Freelance projects that depends on your project value.</p>
-            <p>Hire me and get your project done!</p>
+    <section className="bg-gradient-to-r from-[#17d497] to-[#08f7f7] py-16">
+      <div className="container mx-auto px-4 max-w-6xl">
+        <motion.div
+          className="flex flex-col md:flex-row items-center justify-between gap-8"
+          initial={{ y: 50, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}>
+          <div className="flex items-center gap-6">
+            <BsSendFill className="text-5xl text-[#22252c] hidden md:block" />
+            <div>
+              <h2 className="text-2xl md:text-3xl font-bold text-[#22252c] mb-2">
+                HIRE ME FOR YOUR AWESOME PROJECT
+              </h2>
+              <p className="text-[#22252c]/90">
+                I am available for Freelance projects that depends on your project value.
+              </p>
+              <p className="text-[#22252c]/90">Hire me and get your project done!</p>
+            </div>
           </div>
-        </div>
-        <button className="bg-[#22252c] shadow text-[#02cfb4] py-3 px-8 text-base md:py-4 md:px-12 md:text-2xl my-5 md:my-0 hover:text-white hover:bg-[#3e4451]">
-          <a href="mailto:alexrengkat@gmail.com"> HIRE ME</a>
-        </button>
-      </motion.div>
-    </div>
+
+          <motion.a
+            href="mailto:alexrengkat@gmail.com"
+            className="px-8 py-4 bg-[#22252c] text-white font-semibold rounded-lg shadow-lg hover:bg-[#3e4451] transition-colors duration-300 flex items-center gap-2"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}>
+            <BsSendFill className="text-xl" />
+            HIRE ME
+          </motion.a>
+        </motion.div>
+      </div>
+    </section>
   );
 };
 

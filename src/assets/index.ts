@@ -11,11 +11,11 @@ import tailwind from "./tailwind.png";
 import sass from "./sass.png";
 import react from "./react.png";
 import typescript from "./typescript.png";
-import wordpress from "./wordpress.png";
+
 import nextjs from "./nextjs.png";
 import chemistry from "./chemistry.svg";
 import teaching from "./teacher-explaining-while-sitting-on-armchair.png";
-import redux from "./redux.svg";
+
 import projectOverlay from "./hedaer-bg-3.jpg";
 import github from "./github.svg";
 import logo from "./logo-2.png";
@@ -29,7 +29,7 @@ import SchoolIcon from "@mui/icons-material/School";
 import LiveTvIcon from "@mui/icons-material/LiveTv";
 import gretch from "./gretch.png";
 import nodeJs from "./nodejs.png";
-import expressJs from "./express-js.png";
+
 import { SvgIconProps } from "@mui/material";
 
 export {
@@ -57,22 +57,7 @@ export {
   gretch,
   nodeJs,
 };
-export const icons = [
-  { icon: html, title: "html" },
-  { icon: css, title: "css" },
-  { icon: js, title: "javascript" },
-  { icon: tailwind, title: "tailwind css" },
-  { icon: sass, title: "sass" },
-  { icon: react, title: "react.js" },
-  { icon: typescript, title: "typescript" },
-  { icon: wordpress, title: "wordpress" },
-  { icon: nextjs, title: "next.js" },
-  { icon: nodeJs, title: "Node.js" },
-  { icon: expressJs, title: "Express.js" },
-  { icon: redux, title: "redux toolkit" },
-  { icon: chemistry, title: "chemistry" },
-  { icon: teaching, title: "teaching" },
-];
+
 export const someProjects = [
   {
     name: "ProjectHub",
