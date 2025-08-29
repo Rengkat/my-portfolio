@@ -74,7 +74,7 @@ const AboutMe = () => {
             </div>
 
             <motion.a
-              href="https://drive.google.com/uc?export=download&id=13R9z6jrnRvEg7h2ja27ZRsxRtBNkhWRf"
+              href="https://drive.google.com/uc?export=download&id=15BuVi8DNsU9CFwzF3sMmpAN1QLFM5egG"
               download="Alexander_Rengkat_Resume.pdf"
               className="inline-block mt-8 px-8 py-3 bg-gradient-to-r from-teal-400 to-cyan-500 text-white font-bold rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
               whileHover={{ scale: 1.05 }}
