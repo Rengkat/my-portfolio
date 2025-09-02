@@ -1,4 +1,5 @@
-import { useContext } from "react";
+// Nav.jsx - Completely modernized navigation
+import { useContext, useState, useEffect } from "react";
 import { facebook, github, instagram, linkedin, twitter } from "../assets";
 import { AppContext } from "../Context/AppContext";
 import { useLocation } from "react-router-dom";
@@ -9,51 +10,67 @@ const Nav = () => {
   const handleClick = () => {
     openMainNav?.();
   };
-  // bg-[#313741]
+  
   const path = useLocation().pathname;
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const isScrolled = window.scrollY > 50;
+      setScrolled(isScrolled);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
-    <>
-      <div
-        className={`${path === "/" ? "nav" : "bg-[#313741] py-[1.8rem]"} fixed top-0 w-full z-[5]`}>
-        <div className="w-[90%] md:w-[75%] mx-auto flex justify-between py-[1rem]">
-          <ul className="flex list-none gap-5">
-            <li>
-              <a target="_blank" href="https://github.com/Rengkat" className=" w-5 h-5">
-                <img src={github} alt="github" className="w-6 h-6" />
+    <nav className={`fixed top-0 w-full z-30 transition-all duration-500 ${
+      path === "/" && !scrolled 
+        ? "bg-transparent" 
+        : "nav backdrop-blur-md shadow-md"
+    }`}>
+      <div className="w-[90%] md:w-[85%] lg:max-w-6xl mx-auto flex justify-between items-center py-4">
+        {/* Social links with modern styling */}
+        <ul className="flex list-none gap-4 md:gap-5">
+          {[
+            { icon: github, href: "https://github.com/Rengkat", alt: "github" },
+            { icon: facebook, href: "https://m.facebook.com/profile.php/?id=100006361571808", alt: "facebook" },
+            { icon: instagram, href: "https://www.instagram.com/alexrengkat/", alt: "instagram" },
+            { icon: twitter, href: "https://twitter.com/RengkatAlex", alt: "twitter" },
+            { icon: linkedin, href: "https://www.linkedin.com/in/alexander-rengkat-b2293b1a3", alt: "linkedin" }
+          ].map((social, index) => (
+            <li key={index}>
+              <a 
+                target="_blank" 
+                href={social.href} 
+                className="block p-2 rounded-full transition-all duration-300 hover:bg-teal-100/50"
+                aria-label={social.alt}
+              >
+                <img 
+                  src={social.icon} 
+                  alt={social.alt} 
+                  className="w-5 h-5 md:w-6 md:h-6 transition-transform duration-300 hover:scale-110" 
+                />
               </a>
             </li>
-            <li>
-              <a href="https://m.facebook.com/profile.php/?id=100006361571808" className=" w-5 h-5">
-                <img src={facebook} alt="facebook" className="w-6 h-6" />
-              </a>
-            </li>
-            <li>
-              <a href="https://www.instagram.com/alexrengkat/">
-                <img src={instagram} alt="instagram" className="w-6 h-6" />
-              </a>
-            </li>
-            <li>
-              <a href="https://twitter.com/RengkatAlex">
-                <img src={twitter} alt="twitter" className="w-6 h-6" />
-              </a>
-            </li>
-            <li>
-              <a target="_blank" href="https://www.linkedin.com/in/alexander-rengkat-b2293b1a3">
-                <img src={linkedin} alt="linkedin" className="w-6 h-6" />
-              </a>
-            </li>
-          </ul>
-          <header className="cursor-pointer">
-            <aside onClick={handleClick} className="menu w-8 flex flex-col gap-[.3rem]">
-              <div className="bar w-[80%]"></div>
-              <div className="bar"></div>
-              <div className="bar w-[60%]"></div>
-            </aside>
-          </header>
-        </div>
+          ))}
+        </ul>
+
+        {/* Modern hamburger menu */}
+        <button 
+          onClick={handleClick}
+          className="p-2 rounded-lg hover:bg-teal-100/50 transition-colors duration-300 group"
+          aria-label="Open menu"
+        >
+          <div className="w-8 h-8 flex flex-col justify-center items-center gap-1.5">
+            <div className={`h-0.5 w-6 transition-all duration-300 ${path === "/" && !scrolled ? 'bg-white' : 'bg-gray-800'} group-hover:bg-teal-500`}></div>
+            <div className={`h-0.5 w-5 transition-all duration-300 ${path === "/" && !scrolled ? 'bg-white' : 'bg-gray-800'} group-hover:bg-teal-500 group-hover:w-6`}></div>
+            <div className={`h-0.5 w-4 transition-all duration-300 ${path === "/" && !scrolled ? 'bg-white' : 'bg-gray-800'} group-hover:bg-teal-500 group-hover:w-6`}></div>
+          </div>
+        </button>
       </div>
-    </>
+    </nav>
   );
 };
 

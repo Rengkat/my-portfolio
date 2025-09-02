@@ -1,3 +1,4 @@
+// SideBar.jsx - Modernized sidebar navigation
 import { Link, useLocation } from "react-router-dom";
 import { logo2 } from "../assets";
 import CloseIcon from "@mui/icons-material/Close";
@@ -8,61 +9,64 @@ const SideBar = () => {
   const context = useContext(AppContext);
   const openMainNav = context?.openMainNav;
   const location = useLocation();
-  // console.log(location);
+  
   const homeRoute =
     location.pathname !== "/" ? (
-      <Link to={"/"} className="link">
+      <Link to={"/"} className="link" onClick={() => openMainNav?.()}>
         Home
       </Link>
     ) : (
-      <a href="#home" className="link">
+      <a href="#top" className="link" onClick={() => openMainNav?.()}>
         Home
       </a>
     );
+    
+  const navItems = [
+    { href: "#about", label: "About" },
+    { href: "#education", label: "Education" },
+    { href: "#experiences", label: "Experiences" },
+    { href: "#skills", label: "Skills" },
+    { href: "#projects", label: "Projects" },
+    { href: "#testimonials", label: "Testimonials" },
+    { href: "#blogs", label: "Blogs" },
+    { href: "#contact", label: "Contact" }
+  ];
+
   return (
-    <div className="w-[50%] md:w-[40%] lg:w-[25%] xl:w-[20%] h-full bg-[#1c9d6c]">
-      <div className="flex justify-between items-center shadow pb-[3rem] px-5 pt-5">
+    <div className="w-72 h-full bg-gradient-to-b from-teal-800 to-cyan-900 shadow-xl">
+      <div className="flex justify-between items-center p-6 border-b border-teal-600/30">
         <Link to={"/"} onClick={() => openMainNav?.()}>
-          <img src={logo2} alt="" />
+          <img src={logo2} alt="Alexander Rengkat" className="h-8" />
         </Link>
-        <CloseIcon
+        <button 
           onClick={() => openMainNav?.()}
-          sx={{
-            color: "white",
-            border: "1px solid white",
-            borderRadius: "50%",
-            padding: "3px",
-            cursor: "pointer",
-          }}
-        />
+          className="p-1.5 rounded-full border border-white/30 hover:bg-white/10 transition-colors duration-200"
+          aria-label="Close menu"
+        >
+          <CloseIcon sx={{ color: "white", fontSize: "1.5rem" }} />
+        </button>
       </div>
-      <nav onClick={() => openMainNav?.()} className="flex flex-col">
-        {homeRoute}
-        <a href="#about" className="link">
-          About
-        </a>
-        <a href="#education" className="link">
-          Education
-        </a>
-        <a href="#experiences" className="link">
-          Experiences
-        </a>
-        <a href="#skills" className="link">
-          Skills
-        </a>
-        <a href="#projects" className="link">
-          Projects
-        </a>
-        <a href="#testimonials" className="link">
-          Testimonial
-        </a>
-        <a href="#blogs" className="link">
-          Blogs
-        </a>
-        <a href="#contact" className="link">
-          Contact
-        </a>
+      
+      <nav className="p-6 flex flex-col gap-2">
+        <div className="mb-4">
+          {homeRoute}
+        </div>
+        
+        {navItems.map((item, index) => (
+          <a 
+            key={index}
+            href={item.href} 
+            className="link py-3 px-4 rounded-lg transition-all duration-300 hover:bg-teal-700/50 hover:pl-6"
+            onClick={() => openMainNav?.()}
+          >
+            {item.label}
+          </a>
+        ))}
       </nav>
+      
+      <div className="absolute bottom-0 left-0 right-0 p-6 text-center text-white/60 text-sm">
+        © {new Date().getFullYear()} Alexander Rengkat
+      </div>
     </div>
   );
 };

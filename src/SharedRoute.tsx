@@ -1,31 +1,40 @@
+// SharedRoute.jsx - Updated with modern design
 import { Outlet } from "react-router-dom";
 import Footer from "./Components/Footer";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import SideBar from "./Components/SideBar";
 import { AppContext } from "./Context/AppContext";
 import { useContext } from "react";
+
 const SharedRoute = () => {
   const { isMainMenuOpen } = useContext(AppContext) ?? { isMainMenuOpen: false };
 
   return (
-    <body className="relative !scroll-smooth">
+    <div className="relative !scroll-smooth min-h-screen flex flex-col">
+      {/* Overlay for sidebar */}
       <div
-        // onClick={openMainNav}
         className={`${
-          isMainMenuOpen ? " translate-x-full" : " translate-x-0"
-        } w-full bg-[#000000cf]  fixed z-50 backdrop-blur-[1px] inset-0 flex justify-end transition-all duration-1000`}>
+          isMainMenuOpen
+            ? "opacity-100 pointer-events-auto"
+            : "opacity-0 pointer-events-none"
+        } fixed inset-0 bg-black/70 backdrop-blur-md z-40 transition-all duration-500`}
+      >
         <SideBar />
       </div>
-      <main className="relative">
+      
+      <main className="relative flex-grow">
         <Outlet />
       </main>
+      
       <Footer />
-      <a href="#top">
-        <div className="nav-btn w-[3rem] h-[3rem] cursor-pointer z-[5] rounded-full fixed bottom-5 right-5 grid place-content-center">
-          <KeyboardArrowUpIcon sx={{ fontSize: "2rem", color: "white" }} />
+      
+      {/* Back to top button */}
+      <a href="#top" className="group">
+        <div className="w-12 h-12 cursor-pointer z-20 rounded-full fixed bottom-6 right-6 grid place-content-center bg-gradient-to-r from-teal-500 to-cyan-500 shadow-lg hover:shadow-xl transition-all duration-300 group-hover:scale-110">
+          <KeyboardArrowUpIcon sx={{ fontSize: "1.8rem", color: "white" }} />
         </div>
       </a>
-    </body>
+    </div>
   );
 };
 

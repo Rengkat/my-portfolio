@@ -10,7 +10,7 @@ export interface AppState extends State {
   openMainNav: () => void;
 }
 const initialState: State = {
-  isMainMenuOpen: true,
+  isMainMenuOpen: false,
   projects: [],
   projectsLoading: false,
   blogs: [],

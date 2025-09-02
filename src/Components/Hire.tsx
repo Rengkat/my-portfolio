@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const HireMe = () => {
   return (
-    <section className="bg-gradient-to-r from-[#17d497] to-[#08f7f7] py-16">
+    <section id='hire' className="bg-gradient-to-r from-[#17d497] to-[#08f7f7] py-16">
       <div className="container mx-auto px-4 max-w-6xl">
         <motion.div
           className="flex flex-col md:flex-row items-center justify-between gap-8"

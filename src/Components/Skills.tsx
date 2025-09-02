@@ -14,8 +14,31 @@ import {
   SiRedux,
   SiMongodb,
   SiPostgresql,
+  SiNestjs,
+  SiGithub,
+  SiDocker,
+  SiJest,
+  SiCypress,
+  SiVite,
+  SiVercel,
+  SiNetlify,
+  SiFirebase,
+  SiGit,
+  SiReactquery,
+  SiReactrouter,
+  SiReacthookform,
+  SiReacttable,
+  SiFramer,
 } from "react-icons/si";
 import { FaFlask, FaChalkboardTeacher } from "react-icons/fa";
+
+// Custom React Native icon
+const ReactNativeIcon = () => (
+  <svg viewBox="0 0 24 24" className="w-full h-full" fill="currentColor">
+    <path d="M6.5459 1.10399C6.72577 0.440987 7.52203 0.440987 7.7019 1.10399L8.51784 4.07568C8.59469 4.34905 8.84654 4.53964 9.13267 4.53964H12.3177C13.0122 4.53964 13.3123 5.42845 12.7508 5.83742L10.2449 7.64464C10.0108 7.80759 9.91389 8.1025 9.99074 8.37587L10.8067 11.3476C10.9866 12.0106 10.2388 12.5585 9.67733 12.1495L7.17139 10.3423C6.93733 10.1793 6.62567 10.1793 6.39161 10.3423L3.88567 12.1495C3.32422 12.5585 2.57639 12.0106 2.75626 11.3476L3.5722 8.37587C3.64905 8.1025 3.55215 7.80759 3.31809 7.64464L0.812148 5.83742C0.250699 5.42845 0.550815 4.53964 1.2453 4.53964H4.43033C4.71646 4.53964 4.96831 4.34905 5.04516 4.07568L5.8611 1.10399C6.04097 0.440987 6.36603 0.440987 6.5459 1.10399Z"/>
+    <circle cx="12" cy="17" r="5" fill="currentColor"/>
+  </svg>
+);
 
 export const icons = [
   { icon: <SiHtml5 />, title: "HTML5", color: "text-orange-500" },
@@ -25,16 +48,31 @@ export const icons = [
   { icon: <SiSass />, title: "Sass", color: "text-pink-500" },
   { icon: <SiReact />, title: "React", color: "text-blue-400" },
   { icon: <SiTypescript />, title: "TypeScript", color: "text-blue-600" },
+  { icon: <ReactNativeIcon />, title: "React Native", color: "text-blue-300" },
   { icon: <SiWordpress />, title: "WordPress", color: "text-blue-700" },
   { icon: <SiNextdotjs />, title: "Next.js", color: "text-black dark:text-white" },
   { icon: <SiNodedotjs />, title: "Node.js", color: "text-green-600" },
   { icon: <SiExpress />, title: "Express", color: "text-gray-400" },
+  { icon: <SiNestjs />, title: "NestJS", color: "text-red-600" },
   { icon: <SiRedux />, title: "Redux", color: "text-purple-500" },
   { icon: <SiMongodb />, title: "MongoDB", color: "text-green-500" },
   { icon: <SiPostgresql />, title: "PostgreSQL", color: "text-blue-400" },
   { icon: <FaFlask />, title: "Chemistry", color: "text-teal-400" },
   { icon: <FaChalkboardTeacher />, title: "Teaching", color: "text-blue-400" },
+  { icon: <SiNetlify />, title: "Netlify", color: "text-teal-500", category: "Platforms" },
+  { icon: <SiDocker />, title: "Docker", color: "text-blue-500", category: "Tools" },
+  { icon: <SiJest />, title: "Jest", color: "text-red-800", category: "Testing" },
+  { icon: <SiCypress />, title: "Cypress", color: "text-gray-500", category: "Testing" },
+  { icon: <SiVite />, title: "Vite", color: "text-purple-500", category: "Tools" },
+  { icon: <SiVercel />, title: "Vercel", color: "text-black dark:text-white", category: "Platforms" },
+  { icon: <SiGit />, title: "Git", color: "text-orange-600", category: "Tools" },
+  { icon: <SiGithub />, title: "GitHub", color: "text-gray-800 dark:text-gray-200", category: "Tools" },
+  { icon: <SiVite />, title: "Vite", color: "text-purple-500", category: "Tools" },
+  { icon: <SiReactrouter />, title: "React Router", color: "text-pink-500", category: "Frontend" },
+  { icon: <SiReacthookform />, title: "React Hook Form", color: "text-pink-600", category: "Frontend" },
+  { icon: <SiReacttable />, title: "React Table", color: "text-rose-500", category: "Frontend" },
 ];
+
 const Skills = () => {
   const staggerAnimation = {
     hidden: { opacity: 0, y: 20, scale: 0.95 },

@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* Modern CSS additions */
 @layer components {
   .link {
     @apply block py-4 shadow text-xl text-white px-5 font-semibold hover:bg-[#247c5a] hover:px-6 transition-all duration-100 ease-linear;
@@ -44,198 +46,167 @@
   }
 }
 
-.bar {
-  background-color: #fff;
-  height: 0.2rem;
-  transition: all 0.2s linear;
-}
-.menu:hover .bar {
-  width: 100%;
-  background-color: #ffffff;
-}
-.nav {
-  padding: 2rem 0 1.5rem 0;
-  background: rgb(23, 212, 151);
-  background: linear-gradient(
-    90deg,
-    rgba(23, 212, 151, 1) 0%,
-    rgba(18, 222, 179, 1) 32%,
-    rgba(8, 247, 247, 1) 86%
-  );
-  box-shadow: -1px 4px 20px -1px rgba(0, 0, 0, 0.43);
-  -webkit-box-shadow: -1px 4px 20px -1px rgba(0, 0, 0, 0.43);
-  -moz-box-shadow: -1px 4px 20px -1px rgba(0, 0, 0, 0.43);
-}
-.hero {
-  height: 100vh;
-  background-image: url("/src/assets/hedaer-bg-2.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  position: relative;
-}
-body::-webkit-scrollbar {
-  width: 8px; /* width of the entire scrollbar */
-}
-body::-webkit-scrollbar-track {
-  background: transparent; /* color of the tracking area */
-}
-body::-webkit-scrollbar-thumb {
-  background-color: rgb(11, 227, 216); /* color of the scroll thumb */
-  border-radius: 20px; /* roundness of the scroll thumb */
-}
-.hero::before {
-  position: absolute;
-  content: "";
-  background: rgb(23, 212, 151);
-  background: linear-gradient(
-    90deg,
-    rgba(23, 212, 151, 1) 0%,
-    rgba(18, 222, 179, 1) 32%,
-    rgba(8, 247, 247, 1) 86%
-  );
-  inset: 0;
-  opacity: 0.7;
-  z-index: 1;
-}
-.banner {
-  position: absolute;
-  top: 50%; /* Center vertically */
-  transform: translateY(-50%); /* Adjust for the element's height */
+body {
+  font-family: 'Inter', sans-serif;
 }
 
-.resume,
-.blog-btn,
-.horizontal,
-.nav-btn {
-  background: rgb(23, 212, 151);
-  background: linear-gradient(
-    90deg,
-    rgba(23, 212, 151, 1) 0%,
-    rgba(18, 222, 179, 1) 32%,
-    rgba(8, 247, 247, 1) 86%
-  );
+/* Enhanced navigation styles */
+.nav {
+  padding: 1rem 0;
+  background: linear-gradient(90deg, rgba(23,212,151,0.95) 0%, rgba(18,222,179,0.95) 32%, rgba(8,247,247,0.95) 86%);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
-.abtm,
-.int,
-.edu,
-.school,
-.skill-title,
-.testimonial,
-.proj-hero,
-.subpro {
-  background: rgb(23, 212, 151);
-  background: linear-gradient(
-    90deg,
-    rgba(23, 212, 151, 1) 0%,
-    rgba(18, 222, 179, 1) 32%,
-    rgba(8, 247, 247, 1) 86%
-  );
+
+.link {
+  color: white;
+  font-weight: 500;
+  position: relative;
+  padding: 0.5rem 0;
+  transition: all 0.3s ease;
+}
+
+.link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #9affe7 0%, #60efff 100%);
+  transition: width 0.3s ease;
+}
+
+.link:hover::after {
+  width: 100%;
+}
+
+.link:hover {
+  color: #9affe7;
+}
+
+/* Scrollbar styling */
+body::-webkit-scrollbar {
+  width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #17d497, #08f7f7);
+  border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #14c389, #06d9d9);
+}
+
+/* Back to top button animation */
+.nav-btn {
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(8, 247, 247, 0.3);
+}
+
+.nav-btn:hover {
+  box-shadow: 0 6px 20px rgba(8, 247, 247, 0.5);
+  transform: translateY(-3px);
+}
+
+/* Hero section enhancements */
+.hero-section {
+  position: relative;
+  isolation: isolate;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 50%, transparent 30%, rgba(0,0,0,0.7) 100%);
+  z-index: 1;
+}
+
+/* Gradient text utility */
+.gradient-text {
+  background: linear-gradient(90deg, #17d497 0%, #12deb3 32%, #08f7f7 86%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
-.circle {
-  width: 5.5rem;
-  height: 5.5rem;
-  border-radius: 50%;
-  border: #60efff 1px solid;
-  display: grid;
-  place-content: center;
-  color: #60efff;
+
+/* Modern button styles */
+.btn-primary {
+  background: linear-gradient(90deg, #17d497 0%, #12deb3 32%, #08f7f7 86%);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(8, 247, 247, 0.3);
 }
 
-.skill-img {
-  animation: breath 3s infinite linear;
-}
-@keyframes breath {
-  0% {
-    transform: scale(0.5);
-  }
-  50% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(0.5);
-  }
-}
-.circle:hover,
-.skill-icon:hover {
-  background: rgb(23, 212, 151);
-  background: linear-gradient(
-    90deg,
-    rgba(23, 212, 151, 1) 0%,
-    rgba(18, 222, 179, 1) 32%,
-    rgba(8, 247, 247, 1) 86%
-  );
-  color: #ffffff;
-  /* color: #14e8c8; */
-}
-.project-show {
-  background-image: url("/src/assets/hedaer-bg-3.jpg");
-  position: relative;
-}
-.project-show::before {
-  content: "";
-  inset: 0;
-  position: absolute;
-  background-color: #02cfb4cb;
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(8, 247, 247, 0.4);
 }
 
-.dash {
-  border-bottom: 0.2px solid rgb(160, 160, 160);
+.btn-outline {
+  border: 2px solid #17d497;
+  color: #17d497;
+  transition: all 0.3s ease;
 }
-.project-hero {
-  background: url("/src/assets/coding1.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  position: relative;
-}
-.project-hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: #0000009f;
-  z-index: 2;
-}
-.project-relative {
-  position: relative;
-  border: 0.5rem solid transparent;
-  transition: border 1s;
-}
-.project-overlay {
-  position: absolute;
-  inset: 0;
-  background: white;
-  transform: scale(0);
-  transition: transform 500ms;
-}
-.project-relative:hover {
-  border: 0.5rem solid #b8e8dc7c;
-}
-.project-relative:hover .project-overlay {
-  transform: scale(1);
-}
-.circle-cont {
-  display: grid;
-  place-content: center;
-  /* transition: all 2s; */
-}
-.interest-title {
-  text-align: center;
-  font-size: 1.5rem;
-  margin-top: 1.5rem;
+
+.btn-outline:hover {
+  background: #17d497;
   color: white;
-  visibility: hidden;
-  opacity: 0;
-  transition: all 1s linear;
+  transform: translateY(-2px);
 }
 
-.circle-cont:hover .interest-title {
-  visibility: visible;
-  opacity: 1;
+/* Animation for the menu icon */
+.menu-icon {
+  transition: transform 0.3s ease;
 }
-.slideImg {
-  height: 100%;
+
+.menu-icon:hover {
+  transform: rotate(90deg);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero-section h1 {
+    font-size: 3.5rem;
+  }
+  
+  .hero-section h2 {
+    font-size: 2.2rem;
+  }
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.hover-gradient {
+  background-size: 200% 200%;
+  animation: gradientShift 3s ease infinite;
+}
+
+/* Optional: Wave divider alternative */
+.wave-divider {
+  position: relative;
+  height: 30px;
+  overflow: hidden;
+}
+
+.wave-divider::before {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z' fill='%23ffffff'%3E%3C/path%3E%3C/svg%3E");
+  background-size: cover;
+  transform: rotate(180deg);
+  opacity: 0.03;
 }
