@@ -8,39 +8,51 @@
   .link {
     @apply block py-4 shadow text-xl text-white px-5 font-semibold hover:bg-[#247c5a] hover:px-6 transition-all duration-100 ease-linear;
   }
+
   .footer-a {
     @apply w-[3rem] h-[3rem] rounded-full p-3 bg-[#313741] grid place-content-center hover:bg-[#02cfb4] transition-all duration-150 ease-linear;
   }
+
   .footer-icon {
     @apply text-[2rem] shadow text-[#02cfb4] hover:text-[#313741] transition-all duration-100;
   }
+
   .interest-icon {
     @apply text-[5rem];
   }
+
   .label-detail {
     @apply flex gap-4 items-center text-[17px] md:text-xl font-bold text-[#14e8c8];
   }
+
   .detail-info {
     @apply flex gap-4 my-2 md:my-5;
   }
+
   .info-text {
     @apply text-white text-[17px] md:text-xl font-semibold;
   }
+
   .skill-icon {
     @apply border-[0.1rem] md:border-[0.3rem] border-[#14e8c8] w-[6.5rem] md:w-[9rem] h-[6.5rem] md:h-[9rem];
   }
+
   .send-btn {
     @apply bg-[#313741] gap-2 text-[#02cfb4] border-2 border-[#02cfb4] py-4 md:py-5 font-semibold px-[3rem] md:px-[5rem] mt-[5rem] text-sm hover:bg-[#02cfb4] hover:text-white;
   }
+
   .project-nav {
     @apply px-[5px] md:px-5 border-r-2 border-[#02cfb4] text-white font-semibold cursor-pointer;
   }
+
   .single-pro-icon {
     @apply text-5xl border-[1px] border-[#14e8c8] p-2 rounded-full text-[#14e8c8] hover:text-white hover:bg-[#14e8c8] transition-all duration-200 ease-linear;
   }
+
   .tech-used {
     @apply text-[#14e8c8];
   }
+
   html {
     scroll-behavior: smooth;
   }
@@ -53,7 +65,7 @@ body {
 /* Enhanced navigation styles */
 .nav {
   padding: 1rem 0;
-  background: linear-gradient(90deg, rgba(23,212,151,0.95) 0%, rgba(18,222,179,0.95) 32%, rgba(8,247,247,0.95) 86%);
+  background: linear-gradient(90deg, rgba(23, 212, 151, 0.95) 0%, rgba(18, 222, 179, 0.95) 32%, rgba(8, 247, 247, 0.95) 86%);
   backdrop-filter: blur(10px);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
@@ -124,7 +136,7 @@ body::-webkit-scrollbar-thumb:hover {
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 50% 50%, transparent 30%, rgba(0,0,0,0.7) 100%);
+  background: radial-gradient(circle at 50% 50%, transparent 30%, rgba(0, 0, 0, 0.7) 100%);
   z-index: 1;
 }
 
@@ -169,21 +181,29 @@ body::-webkit-scrollbar-thumb:hover {
   transform: rotate(90deg);
 }
 
-/* Responsive adjustments */
+
 @media (max-width: 768px) {
   .hero-section h1 {
     font-size: 3.5rem;
   }
-  
+
   .hero-section h2 {
     font-size: 2.2rem;
   }
 }
 
 @keyframes gradientShift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .hover-gradient {
@@ -191,7 +211,7 @@ body::-webkit-scrollbar-thumb:hover {
   animation: gradientShift 3s ease infinite;
 }
 
-/* Optional: Wave divider alternative */
+
 .wave-divider {
   position: relative;
   height: 30px;
