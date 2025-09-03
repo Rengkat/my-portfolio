@@ -21,9 +21,6 @@ const ProjectShow = () => {
         ease: "easeOut",
       },
     }),
-  };
-
-  const hoverVariants = {
     hover: {
       y: -5,
       transition: {
@@ -66,9 +63,8 @@ const ProjectShow = () => {
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, margin: "0px 0px -50px 0px" }}
-                variants={itemVariants}
                 whileHover="hover"
-                variants={hoverVariants}
+                variants={itemVariants}
                 className="h-80"
               >
                 <div className="relative h-full w-full rounded-xl overflow-hidden shadow-lg group bg-gray-800">

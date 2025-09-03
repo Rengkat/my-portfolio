@@ -22,13 +22,10 @@ import {
   SiVite,
   SiVercel,
   SiNetlify,
-  SiFirebase,
   SiGit,
-  SiReactquery,
   SiReactrouter,
   SiReacthookform,
   SiReacttable,
-  SiFramer,
 } from "react-icons/si";
 import { FaFlask, FaChalkboardTeacher } from "react-icons/fa";
 

@@ -1,4 +1,3 @@
-import WorkIcon from "@mui/icons-material/Work";
 import { motion } from "framer-motion";
 
 const Experiences = () => {
