@@ -62,85 +62,195 @@ body {
   font-family: 'Inter', sans-serif;
 }
 
-/* Enhanced navigation styles */
+
+.bar {
+  background-color: #fff;
+  height: 0.2rem;
+  transition: all 0.2s linear;
+}
+.menu:hover .bar {
+  width: 100%;
+  background-color: #ffffff;
+}
 .nav {
   padding: 1rem 0;
   background: linear-gradient(90deg, rgba(23, 212, 151, 0.95) 0%, rgba(18, 222, 179, 0.95) 32%, rgba(8, 247, 247, 0.95) 86%);
   backdrop-filter: blur(10px);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
-
-.link {
-  color: white;
-  font-weight: 500;
+.hero {
+  height: 100vh;
+  background-image: url("/src/assets/hedaer-bg-2.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   position: relative;
-  padding: 0.5rem 0;
-  transition: all 0.3s ease;
 }
-
-.link::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: linear-gradient(90deg, #9affe7 0%, #60efff 100%);
-  transition: width 0.3s ease;
-}
-
-.link:hover::after {
-  width: 100%;
-}
-
-.link:hover {
-  color: #9affe7;
-}
-
-/* Scrollbar styling */
 body::-webkit-scrollbar {
-  width: 8px;
+  width: 8px; /* width of the entire scrollbar */
 }
-
 body::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: transparent; /* color of the tracking area */
 }
-
 body::-webkit-scrollbar-thumb {
-  background: linear-gradient(to bottom, #17d497, #08f7f7);
-  border-radius: 10px;
+  background-color: rgb(11, 227, 216); /* color of the scroll thumb */
+  border-radius: 20px; /* roundness of the scroll thumb */
 }
-
-body::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(to bottom, #14c389, #06d9d9);
-}
-
-/* Back to top button animation */
-.nav-btn {
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(8, 247, 247, 0.3);
-}
-
-.nav-btn:hover {
-  box-shadow: 0 6px 20px rgba(8, 247, 247, 0.5);
-  transform: translateY(-3px);
-}
-
-/* Hero section enhancements */
-.hero-section {
-  position: relative;
-  isolation: isolate;
-}
-
-.hero-section::before {
-  content: '';
+.hero::before {
   position: absolute;
+  content: "";
+  background: rgb(23, 212, 151);
+  background: linear-gradient(
+    90deg,
+    rgba(23, 212, 151, 1) 0%,
+    rgba(18, 222, 179, 1) 32%,
+    rgba(8, 247, 247, 1) 86%
+  );
   inset: 0;
-  background: radial-gradient(circle at 50% 50%, transparent 30%, rgba(0, 0, 0, 0.7) 100%);
+  opacity: 0.7;
   z-index: 1;
 }
+.banner {
+  position: absolute;
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%); /* Adjust for the element's height */
+}
 
-/* Gradient text utility */
+.resume,
+.blog-btn,
+.horizontal,
+.nav-btn {
+  background: rgb(23, 212, 151);
+  background: linear-gradient(
+    90deg,
+    rgba(23, 212, 151, 1) 0%,
+    rgba(18, 222, 179, 1) 32%,
+    rgba(8, 247, 247, 1) 86%
+  );
+}
+.abtm,
+.int,
+.edu,
+.school,
+.skill-title,
+.testimonial,
+.proj-hero,
+.subpro {
+  background: rgb(23, 212, 151);
+  background: linear-gradient(
+    90deg,
+    rgba(23, 212, 151, 1) 0%,
+    rgba(18, 222, 179, 1) 32%,
+    rgba(8, 247, 247, 1) 86%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.circle {
+  width: 5.5rem;
+  height: 5.5rem;
+  border-radius: 50%;
+  border: #60efff 1px solid;
+  display: grid;
+  place-content: center;
+  color: #60efff;
+}
+
+.skill-img {
+  animation: breath 3s infinite linear;
+}
+@keyframes breath {
+  0% {
+    transform: scale(0.5);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.5);
+  }
+}
+.circle:hover,
+.skill-icon:hover {
+  background: rgb(23, 212, 151);
+  background: linear-gradient(
+    90deg,
+    rgba(23, 212, 151, 1) 0%,
+    rgba(18, 222, 179, 1) 32%,
+    rgba(8, 247, 247, 1) 86%
+  );
+  color: #ffffff;
+  /* color: #14e8c8; */
+}
+.project-show {
+  background-image: url("/src/assets/hedaer-bg-3.jpg");
+  position: relative;
+}
+.project-show::before {
+  content: "";
+  inset: 0;
+  position: absolute;
+  background-color: #02cfb4cb;
+}
+
+.dash {
+  border-bottom: 0.2px solid rgb(160, 160, 160);
+}
+.project-hero {
+  background: url("/src/assets/coding1.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.project-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #0000009f;
+  z-index: 2;
+}
+.project-relative {
+  position: relative;
+  border: 0.5rem solid transparent;
+  transition: border 1s;
+}
+.project-overlay {
+  position: absolute;
+  inset: 0;
+  background: white;
+  transform: scale(0);
+  transition: transform 500ms;
+}
+.project-relative:hover {
+  border: 0.5rem solid #b8e8dc7c;
+}
+.project-relative:hover .project-overlay {
+  transform: scale(1);
+}
+.circle-cont {
+  display: grid;
+  place-content: center;
+  /* transition: all 2s; */
+}
+.interest-title {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+  color: white;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 1s linear;
+}
+
+.circle-cont:hover .interest-title {
+  visibility: visible;
+  opacity: 1;
+}
+.slideImg {
+  height: 100%;
+}
 .gradient-text {
   background: linear-gradient(90deg, #17d497 0%, #12deb3 32%, #08f7f7 86%);
   -webkit-background-clip: text;
@@ -148,7 +258,7 @@ body::-webkit-scrollbar-thumb:hover {
   color: transparent;
 }
 
-/* Modern button styles */
+
 .btn-primary {
   background: linear-gradient(90deg, #17d497 0%, #12deb3 32%, #08f7f7 86%);
   transition: all 0.3s ease;
@@ -172,7 +282,7 @@ body::-webkit-scrollbar-thumb:hover {
   transform: translateY(-2px);
 }
 
-/* Animation for the menu icon */
+
 .menu-icon {
   transition: transform 0.3s ease;
 }
@@ -229,4 +339,4 @@ body::-webkit-scrollbar-thumb:hover {
   background-size: cover;
   transform: rotate(180deg);
   opacity: 0.03;
-}
+} 
