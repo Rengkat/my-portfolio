@@ -1,7 +1,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { FaLink, FaGithub, FaArrowLeft } from "react-icons/fa";
 import { useParams, useNavigate } from "react-router-dom";
-import { Fragment, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Client, sanityImageUrl } from "../../lib/sanity";
 import { DetailProjectType, Image } from "../Types";
 import { PiArrowLeftLight, PiArrowRightLight } from "react-icons/pi";
